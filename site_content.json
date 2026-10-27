@@ -18,7 +18,7 @@
   },
   "portfolio": [
     {
-      "id": 101,
+      "id": "101",
       "title": "FIRST Robotics — FLL & FTC",
       "category_slug": "robotics",
       "category_name": "Robotics & Coding",
@@ -60,9 +60,6 @@
         "FTC",
         "FLL"
       ],
-      "is_robotics": true,
-      "sort_order": 0,
-      "badge_position": "right",
       "sections": [
         {
           "title": "Autonomous Navigation & Computer-Vision Algorithms",
@@ -77,14 +74,16 @@
           "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
         }
       ],
-      "hide_badges": false
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": true,
+      "sort_order": 0
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
       "category_name": "",
-      "article_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
       "img": "assets/uploads/1792856574507_pic1.jpeg",
       "images": [
         "assets/uploads/1792856574507_pic1.jpeg",
@@ -117,9 +116,6 @@
       "badges": [
         "MIT Media lab"
       ],
-      "is_robotics": false,
-      "sort_order": 1,
-      "badge_position": "right",
       "sections": [
         {
           "title": "The technical pitch",
@@ -130,16 +126,17 @@
           "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
         }
       ],
-      "hide_badges": false
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
       "category_name": "",
       "img": "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
-      "img_position": "center top",
-      "modal_img_position": "top",
       "images": [
         "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
         "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
@@ -169,9 +166,6 @@
       "badges": [
         "IEEE/ISEC"
       ],
-      "is_robotics": false,
-      "sort_order": 2,
-      "badge_position": "right",
       "sections": [
         {
           "title": "IEEE/ISEC 2026 presentation at Princeton University",
@@ -199,7 +193,6 @@
           "photos": []
         }
       ],
-      "hide_badges": false,
       "videos": [
         {
           "type": "youtube",
@@ -207,10 +200,13 @@
           "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
           "poster": ""
         }
-      ]
+      ],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 2
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
       "category_name": "",
@@ -249,9 +245,6 @@
         "NJWEA",
         "MSEF"
       ],
-      "is_robotics": false,
-      "sort_order": 3,
-      "badge_position": "right",
       "sections": [
         {
           "title": "IEEE/ISEC 2026 presentation at Princeton University",
@@ -274,7 +267,6 @@
           "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
         }
       ],
-      "hide_badges": false,
       "videos": [
         {
           "type": "youtube",
@@ -282,10 +274,13 @@
           "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
           "poster": ""
         }
-      ]
+      ],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 3
     },
     {
-      "id": 1,
+      "id": "1",
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
       "category_name": "",
@@ -310,9 +305,6 @@
         "#pHBuoy"
       ],
       "badges": [],
-      "is_robotics": false,
-      "sort_order": 4,
-      "badge_position": "right",
       "sections": [
         {
           "title": "System architecture and 3M challenge brief",
@@ -325,74 +317,20 @@
           "photos": []
         }
       ],
-      "hide_badges": false,
       "videos": [
         {
           "type": "local",
-          "src": "projects/videos/3m-buoy-preview.mp4",
-          "title": "3M Young Scientist Challenge submission",
+          "src": "projects/videos/3MYSC Submission - Neutralizing Ocean Acidification_ An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems.mp4",
+          "title": "3MYSC Submission - Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems",
           "poster": "projects/ocean-project-presentation.jpg"
         }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Biomedical & AI Scientific Research",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792859269041_2222_aadya.png",
-      "images": [
-        "assets/uploads/1792859269041_2222_aadya.png",
-        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
-        "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
       ],
-      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
-      "highlights": [
-        "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
-        "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
-        "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
-        "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety.",
-        "Stanford AIMI Clinical AI: Selected for competitive 30-week internship (<5% acceptance rate), developing computer vision assistive interfaces utilizing medical imaging.",
-        "Computational Oncology: Co-authoring manuscript on cervical cancer treatments using AutoDock Vina molecular docking simulations.",
-        "Biomedical Research Fellow (Harvard Mentor Prof. Sam Kunes): 24-week bioresearch program with 3 weeks hands-on wet lab work in Boston (CRISPR, gel electrophoresis, PCR).",
-        "Independent Cancer Research (Cambridge Mentor Dr. Kristina Kordova): scRNA-seq analysis & Python classification model identifying 32 breast cancer biomarker clusters."
-      ],
-      "tags": [
-        "#StanfordAIMI",
-        "#HarvardBioResearch",
-        "#ComputationalOncology",
-        "#AutoDockVina",
-        "#CRISPR",
-        "#scRNAseq",
-        "#MachineLearning",
-        "#Bioinformatics"
-      ],
-      "badges": [],
+      "hide_badges": false,
       "is_robotics": false,
-      "sort_order": 7,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
-          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
-        },
-        {
-          "title": "Computational Oncology Research, Mentored Independent Research",
-          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
-        },
-        {
-          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
-          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
-        },
-        {
-          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
-          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
-        }
-      ],
-      "hide_badges": false
+      "sort_order": 4
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "MoniVitals: Equitable Vitals Monitor & App",
       "category_slug": "monivitals",
       "category_name": "MoniVitals",
@@ -425,8 +363,6 @@
       "badges": [
         "HealthTech"
       ],
-      "is_robotics": false,
-      "sort_order": 5,
       "sections": [
         {
           "title": "Community Field Screening & Senior Care Deployment",
@@ -441,16 +377,106 @@
           "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
         }
       ],
+      "videos": [],
       "hide_badges": false,
-      "attachments": [
-        {
-          "label": "MoniVitals project board (PDF)",
-          "href": "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link"
-        }
-      ]
+      "is_robotics": false,
+      "sort_order": 5
     },
     {
-      "id": 11,
+      "id": "1792918752665",
+      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792918739033_bio.jpeg",
+      "images": [
+        "assets/uploads/1792918739033_bio.jpeg",
+        "https://aimi.stanford.edu/academic-year-research-internship"
+      ],
+      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
+      "highlights": [
+        "Completed a two-week summer internship",
+        "Invited to continue as an academic-year researcher",
+        "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
+      ],
+      "tags": [],
+      "badges": [],
+      "sections": [
+        {
+          "title": "Stanford AIMI 30-Week Research Internship",
+          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
+        },
+        {
+          "title": "Machine Learning & Computer Vision Modeling",
+          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
+        },
+        {
+          "title": "Accessibility & Board of Trustees Presentation",
+          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+        }
+      ],
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 6
+    },
+    {
+      "id": "5",
+      "title": "Biomedical & AI Scientific Research",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792859269041_2222_aadya.png",
+      "images": [
+        "assets/uploads/1792859269041_2222_aadya.png",
+        "assets/uploads/1792842145435_BioResearch_Academy_Certificate.jpeg",
+        "assets/uploads/1792919829384_University_Lecture_on_Fluorescent_Microscopy.png"
+      ],
+      "desc": "Research and Training Experience\n\n1. Molecular and Cellular Biology — Coursework and Wet-Lab Training\nCompleted a 24-week molecular and cellular biology program with Professor Sam Kunes of Harvard University, followed by three weeks of summer wet-lab training. Studied Alzheimer’s disease, molecular mechanisms, experimental design, controls, and laboratory methods.\n\n2. Computational Biology and Cancer Research — Independent Projects\n\nConducting computational research to investigate cancer biology and develop testable hypotheses:\n\nSingle-cell RNA sequencing: Used Python for data normalization, dimensionality reduction, and clustering.\n\nCancer signaling: Developing graph-theory and Boolean-network models of cancer signaling.\n\nCervical cancer: Completed an initial computational phase using molecular docking and simulations to generate hypotheses. Planning a second phase involving wet-lab experiments and transcriptomic analysis to evaluate potential biological effects and underlying mechanisms.\n\nThese projects are exploratory and ongoing; they do not establish clinical efficacy or treatment discoveries.\n\n3. Stanford AIMI — 30-Week Academic-Year Research Internship\n\nParticipating as an academic-year machine-learning researcher on “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Gaining experience in accessibility, model validation, and user-centered design in health technology.",
+      "highlights": [
+        "Machine Learning & AI: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Random Forest, XGBoost, Predictive Modeling, Data Cleansing, Imbalance Resolution.",
+        "Programming & Software: Python, MATLAB, Google Colab, Bash Scripting.",
+        "Bioinformatics Tools: AutoDock Vina (Molecular Docking), Computational Structural Biology, Protein Modeling, Graph Theory Networks.",
+        "Wet Lab Techniques: Sterile cell culture, CRISPR-Cas9 protocols, gel electrophoresis, PCR preparation, chemical safety.",
+        "Stanford AIMI Clinical AI: Selected for competitive 30-week internship (<5% acceptance rate), developing computer vision assistive interfaces utilizing medical imaging.",
+        "Computational Oncology: Co-authoring manuscript on cervical cancer treatments using AutoDock Vina molecular docking simulations.",
+        "Biomedical Research Fellow (Harvard Mentor Prof. Sam Kunes): 24-week bioresearch program with 3 weeks hands-on wet lab work in Boston (CRISPR, gel electrophoresis, PCR).",
+        "Independent Cancer Research (Cambridge Mentor Dr. Kristina Kordova): scRNA-seq analysis & Python classification model identifying 32 breast cancer biomarker clusters."
+      ],
+      "tags": [
+        "#StanfordAIMI",
+        "#HarvardBioResearch",
+        "#ComputationalOncology",
+        "#AutoDockVina",
+        "#CRISPR",
+        "#scRNAseq",
+        "#MachineLearning",
+        "#Bioinformatics"
+      ],
+      "badges": [],
+      "sections": [
+        {
+          "title": "Stanford AIMI Academic year Internship (Center for Artificial Intelligence in Medicine & Imaging)",
+          "intro": "Stanford University School of Medicine, Center for Artificial Intelligence in Medicine & Imaging (AIMI), Stanford, CA (Remote) &mdash; Academic Year Research Intern | September 2026 – June 2027.<br><br>• Selected for a highly competitive 30-week clinical AI research internship (acceptance rate under 5%).<br>• Developing and evaluating computer vision models for an AI-driven assistive interface for people with visual impairments, utilizing medical imaging.<br>• Scheduled to present research at a Stanford Health event in summer 2027."
+        },
+        {
+          "title": "Computational Oncology Research, Mentored Independent Research",
+          "intro": "Research Co-Author | June 2026 – Present.<br><br>• Conducting computational drug discovery research focusing on cervical cancer treatments utilizing a target plant molecule.<br>• Performed structural bioinformatics modeling and high-throughput molecular docking simulations with AutoDock Vina.<br>• Publication Status: Co-authoring manuscript currently in preparation for submission to a professional peer-reviewed journal."
+        },
+        {
+          "title": "Biomedical Research Fellow — Advanced BioResearch Academy, Boston. MA",
+          "intro": "Research Trainee | Fall 2025 – Summer 2026 | Mentor: Professor Sam Kunes, Harvard University.<br><br>• Completed an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy.<br>• Delivered independent research project presentations at the end of each 12-week session.<br>• Conducted 3 weeks of hands-on physical wet lab work in Boston under a Harvard University professor, practicing CRISPR, gel electrophoresis, and PCR protocols for Alzheimer's disease research."
+        },
+        {
+          "title": "Research Scholar Program - Independent Cancer Research (12-wks)",
+          "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
+        }
+      ],
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 7
+    },
+    {
+      "id": "11",
       "title": "Mercer County Hunger Relief & Meal Packaging Drives",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -513,8 +539,6 @@
       "badges": [
         "Hunger Relief"
       ],
-      "is_robotics": false,
-      "sort_order": 8,
       "sections": [
         {
           "title": "Grassroots Logistics & Youth Mobilization",
@@ -525,10 +549,13 @@
           "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
         }
       ],
-      "hide_badges": false
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 8
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "New Jersey Legislative Commendation & Civic Supply Drives",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -553,8 +580,6 @@
       "badges": [
         "Youth Volunteering"
       ],
-      "is_robotics": false,
-      "sort_order": 9,
       "sections": [
         {
           "title": "Regional Winter Drive Logistics",
@@ -565,36 +590,77 @@
           "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
         }
       ],
-      "hide_badges": false
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 9
     },
     {
-      "id": 14,
+      "id": "1792917988413",
+      "title": "BioResearch Academy - 24 week Advanced Biology course and 3 week wet-lab",
+      "category_slug": "biomedical",
+      "category_name": "Biomedical Research & AI",
+      "img": "assets/uploads/1792917943889_20260710_121848.jpg",
+      "images": [
+        "assets/uploads/1792917943889_20260710_121848.jpg"
+      ],
+      "desc": "Bioresearch Academy, Prof. Sam Kunes, Harvard University\n24-week Advanced BioResearch Program                       \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\nDelivered independent research project presentations at the end of each 12-week session\n3-week Wet lab research work      \nConducting intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing\nDeveloped wet-lab technical skills",
+      "highlights": [],
+      "tags": [],
+      "badges": [],
+      "sections": [
+        {
+          "title": "24-Week Advanced BioResearch Curriculum",
+          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session."
+        },
+        {
+          "title": "3-Week Physical Wet Lab & Molecular Biology Research",
+          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
+        }
+      ],
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 10
+    },
+    {
+      "id": "1792994088000",
+      "title": "Leopold Scholars in Ecology and Ethics",
+      "category_slug": "community",
+      "category_name": "School & Community",
+      "img": "assets/community/leopold-scholars-in-ecology-and-ethics.jpg",
+      "images": [
+        "assets/community/leopold-scholars-in-ecology-and-ethics.jpg"
+      ],
+      "desc": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+      "highlights": [
+        "Selected as Leopold Scholar in Ecology and Ethics by The Lawrenceville School",
+        "Conducted empirical stream ecology and watershed research at the Stroud Water Research Center",
+        "Immersed in Aldo Leopold's Land Ethic exploring biodiversity conservation and environmental stewardship",
+        "Leadership role on the School's Sustainability Council advancing campus ecological initiatives"
+      ],
+      "tags": [
+        "#LeopoldScholars",
+        "#Lawrenceville",
+        "#EcologyAndEthics",
+        "#Sustainability",
+        "#LandEthic"
+      ],
+      "badges": [
+        "Ecology & Ethics"
+      ],
+      "sections": [],
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 10
+    },
+    {
+      "id": "14",
       "title": "Creative & Academic Writing",
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
       "img": "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
-      "link_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
-      "article_url": "https://www.tellingroom.org/stories-full/when-kindness-is-planted",
-      "desc": "Loves writing short stories, poems, essays, and poetry, and participating in Academic and creative writing contests. Won Regional, National and International awards",
-      "highlights": [
-        "John Locke Institute Essay Competition 2026: High Commendation  (Among top 3%-5%) globally for analytical writing connecting scientific inquiry and historical frameworks. Title: Should You Be Polite to ChatGPT",
-        "Harvard International Review Academic Writing Contest (Summer 2026) : Awarded Bronze Medal in the Technology, Innovation, and Power theme for an independent analytical essay examining how racial bias in pulse oximetry can create inequities in health care and shape global public-health outcomes, Title: Western Standard For All How Medical Bias Still Leaves Billions At Risk",
-        "Scholastic Art & Writing Awards: 2 Silver Key and 3 Honorable Mention recipients for science fiction and creative writing.",
-        "John H. Imbrie Humanities/English Prize 2025-2026: Awarded to one of approximately 150 Second Form (Grade 9) Lawrenceville students for humanistic inquiry and prose."
-      ],
-      "tags": [
-        "#Flute",
-        "#ClassicalPiano",
-        "#JohnLocke",
-        "#Poetry",
-        "#CreativeWriting",
-        "#ScienceJournalism",
-        "#Theatre",
-        "#NJMTA",
-        "#MusicFest"
-      ],
-      "badges": [],
-      "sort_order": 11,
       "images": [
         "assets/uploads/1792918427379_Writing_-_When_Kindness_Was_Planted.png",
         "assets/writing_arts/Aadya Flute Pic1.png",
@@ -632,20 +698,25 @@
         "assets/speaking/speech_stage.jpg",
         "assets/certificates/nsf_speech_award.png"
       ],
-      "attachments": [
-        {
-          "label": "John Locke 2026 High Commendation (PDF)",
-          "href": "assets/writing_arts/John Locke 2026 - High Commendation.pdf"
-        },
-        {
-          "label": "Scholastic Poetry Silver Key certificate (PDF)",
-          "href": "assets/writing_arts/Scholastic_Poetry_Silver_Key_Certificate.pdf"
-        },
-        {
-          "label": "Scholastic Writing recognition letter (PDF)",
-          "href": "assets/writing_arts/Scholastic_Writing_Recognition_Letter.pdf"
-        }
+      "desc": "Loves writing short stories, poems, essays, and poetry, and participating in Academic and creative writing contests. Won Regional, National and International awards",
+      "highlights": [
+        "John Locke Institute Essay Competition 2026: High Commendation  (Among top 3%-5%) globally for analytical writing connecting scientific inquiry and historical frameworks. Title: Should You Be Polite to ChatGPT",
+        "Harvard International Review Academic Writing Contest (Summer 2026) : Awarded Bronze Medal in the Technology, Innovation, and Power theme for an independent analytical essay examining how racial bias in pulse oximetry can create inequities in health care and shape global public-health outcomes, Title: Western Standard For All How Medical Bias Still Leaves Billions At Risk",
+        "Scholastic Art & Writing Awards: 2 Silver Key and 3 Honorable Mention recipients for science fiction and creative writing.",
+        "John H. Imbrie Humanities/English Prize 2025-2026: Awarded to one of approximately 150 Second Form (Grade 9) Lawrenceville students for humanistic inquiry and prose."
       ],
+      "tags": [
+        "#Flute",
+        "#ClassicalPiano",
+        "#JohnLocke",
+        "#Poetry",
+        "#CreativeWriting",
+        "#ScienceJournalism",
+        "#Theatre",
+        "#NJMTA",
+        "#MusicFest"
+      ],
+      "badges": [],
       "sections": [
         {
           "title": "Published writing",
@@ -792,39 +863,13 @@
           ]
         }
       ],
-      "gallerySubtitle": "Selected flute performances, piano recitals, writing publications, literary recognition and theater.",
-      "badge_position": "right",
-      "hide_badges": false
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 11
     },
     {
-      "id": 1792917988413,
-      "title": "BioResearch Academy - 24 week Advanced Biology course and 3 week wet-lab",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792917943889_20260710_121848.jpg",
-      "images": [
-        "assets/uploads/1792917943889_20260710_121848.jpg"
-      ],
-      "desc": "Bioresearch Academy, Prof. Sam Kunes, Harvard University\n24-week Advanced BioResearch Program                       \nCompleted an intensive 24-week bioresearch program covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy\nDelivered independent research project presentations at the end of each 12-week session\n3-week Wet lab research work      \nConducting intensive hands-on research in molecular and cellular biology, including high-throughput RNA sequencing\nDeveloped wet-lab technical skills",
-      "highlights": [],
-      "tags": [],
-      "badges": [],
-      "sort_order": 10,
-      "badge_position": "right",
-      "sections": [
-        {
-          "title": "24-Week Advanced BioResearch Curriculum",
-          "intro": "Completed an intensive 24-week bioresearch program under Prof. Sam Kunes (Harvard University) covering cancer cell biology (DNA replication errors, tumor cell identity, cell division regulation), brain organoids, CRISPR genome editing, spatial transcriptomics, advanced microscopy, and synthetic biology in therapy. Delivered independent research project presentations at the end of each 12-week session."
-        },
-        {
-          "title": "3-Week Physical Wet Lab & Molecular Biology Research",
-          "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
-        }
-      ],
-      "hide_badges": false
-    },
-    {
-      "id": 1792918333524,
+      "id": "1792918333524",
       "title": "Music, Theater & Public Speaking",
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
@@ -832,20 +877,10 @@
       "images": [
         "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
       ],
-      "videos": [
-        {
-          "type": "local",
-          "src": "projects/videos/music-performance-preview.mp4",
-          "title": "Flute & Piano Recital Performance",
-          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
-          "is_placeholder": true
-        }
-      ],
       "desc": "editted",
       "highlights": [],
       "tags": [],
       "badges": [],
-      "sort_order": 12,
       "sections": [
         {
           "title": "Piano",
@@ -967,53 +1002,25 @@
           ]
         }
       ],
-      "hide_badges": false,
-      "badge_position": "right"
-    },
-    {
-      "id": 1792918752665,
-      "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
-      "category_slug": "biomedical",
-      "category_name": "Biomedical Research & AI",
-      "img": "assets/uploads/1792918739033_bio.jpeg",
-      "images": [
-        "assets/uploads/1792918739033_bio.jpeg",
-        "https://aimi.stanford.edu/academic-year-research-internship"
-      ],
-      "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
-      "highlights": [
-        "Completed a two-week summer internship",
-        "Invited to continue as an academic-year researcher",
-        "Presented my Stanford AIMI project, “User-Centric AI for Assisting the Visually Impaired,” to The Lawrenceville School’s Board of Trustees on October 23, 2026."
-      ],
-      "tags": [],
-      "badges": [],
-      "sort_order": 6,
-      "badge_position": "right",
-      "sections": [
+      "videos": [
         {
-          "title": "Stanford AIMI 30-Week Research Internship",
-          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
-        },
-        {
-          "title": "Machine Learning & Computer Vision Modeling",
-          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
-        },
-        {
-          "title": "Accessibility & Board of Trustees Presentation",
-          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+          "type": "local",
+          "src": "projects/videos/music-performance-preview.mp4",
+          "title": "Flute & Piano Recital Performance",
+          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
+          "is_placeholder": true
         }
       ],
-      "hide_badges": false
+      "hide_badges": false,
+      "is_robotics": false,
+      "sort_order": 12
     },
     {
-      "id": 1792995954131,
+      "id": "1792995954131",
       "title": "here it is",
       "category_slug": "community",
       "category_name": "School & Community",
       "img": "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
-      "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics",
-      "article_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/sliders/post/leopold-scholars-in-ecology-and-ethics",
       "images": [
         "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
         "assets/uploads/1792995905368_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg"
@@ -1027,7 +1034,6 @@
       ],
       "tags": [],
       "badges": [],
-      "hide_badges": false,
       "sections": [
         {
           "title": "explore the work section 1",
@@ -1035,11 +1041,13 @@
           "photos": []
         }
       ],
-      "badge_position": "right",
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
       "sort_order": 14
     },
     {
-      "id": 1792997124021,
+      "id": "1792997124021",
       "title": "2nd blank tile",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -1054,7 +1062,6 @@
       ],
       "tags": [],
       "badges": [],
-      "hide_badges": false,
       "sections": [
         {
           "title": "Project Overview & Methodology",
@@ -1062,13 +1069,15 @@
           "photos": []
         }
       ],
-      "badge_position": "right",
+      "videos": [],
+      "hide_badges": false,
+      "is_robotics": false,
       "sort_order": 15
     }
   ],
   "documents": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Autonomous Ocean pH Buoy &amp; Chemical Buffer Dispenser",
       "category_pill": "Climate Tech",
       "eyebrow": "Climate Tech &amp; Automation",
@@ -1085,7 +1094,7 @@
       "sort_order": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Biochar AIoT Device: Water Filtration &amp; Adsorption",
       "category_pill": "Water Research",
       "eyebrow": "Environmental Water Remediation &amp; IoT",
@@ -1102,7 +1111,7 @@
       "sort_order": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "AI for a Better World (MIT Solve Water Node)",
       "category_pill": "Responsible AI",
       "eyebrow": "Responsible AI &amp; Edge Computing",
@@ -1119,7 +1128,7 @@
       "sort_order": 2
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "MoniVitals: Non-Invasive Multispectral Telemetry",
       "category_pill": "HealthTech",
       "eyebrow": "Healthtech &amp; Optical Biometrics",
@@ -1136,7 +1145,7 @@
       "sort_order": 3
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "FIRST Tech Challenge (FTC) Autonomous Pathing Architecture",
       "category_pill": "Robotics",
       "eyebrow": "Autonomous Robotics &amp; Motion Control",
@@ -1153,7 +1162,7 @@
       "sort_order": 4
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Multimodal Clinical Sepsis &amp; Diagnostic Modeling",
       "category_pill": "Clinical AI",
       "eyebrow": "Clinical Machine Learning",
@@ -1166,7 +1175,7 @@
       "sort_order": 5
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Cancer Biomarker &amp; Recombinant DNA Assay Protocol",
       "category_pill": "Biomarker Research",
       "eyebrow": "Molecular Biology &amp; Wet-Bench",
@@ -1179,7 +1188,7 @@
       "sort_order": 6
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "John Locke Global Essay: Environmental Governance &amp; Ethics",
       "category_pill": "Humanities",
       "eyebrow": "Humanities &amp; Technological Ethics",
@@ -1194,273 +1203,364 @@
   ],
   "memberships": [
     {
-      "id": 1,
+      "id": "1",
       "org_name": "IEEE (Institute of Electrical and Electronics Engineers)",
-      "role": "Student Member and Presenter",
-      "website_label": "IEEE",
       "badge_text": "IEEE",
       "badge_gradient": "linear-gradient(135deg, #1864ab, #228be6)",
-      "url": "https://www.ieee.org/"
+      "website_label": "IEEE",
+      "role": "Student Member and Presenter",
+      "url": "https://www.ieee.org/",
+      "sort_order": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "org_name": "Water Environment Federation",
-      "role": "U.S. Stockholm Junior Water Prize Award",
-      "website_label": "WEF",
       "badge_text": "WEF",
       "badge_gradient": "linear-gradient(135deg, #099268, #20c997)",
-      "url": "https://www.wef.org/sjwp/"
+      "website_label": "WEF",
+      "role": "U.S. Stockholm Junior Water Prize Award",
+      "url": "https://www.wef.org/sjwp/",
+      "sort_order": 0
     },
     {
-      "id": 3,
+      "id": "3",
       "org_name": "AWDORG Foundation (Anything Will Do)",
-      "role": "Volunteer (Global Youth & Healthcare, ProjectEducate)",
-      "website_label": "AWD Org",
       "badge_text": "AWD",
       "badge_gradient": "linear-gradient(135deg, #e8590c, #f08c00)",
-      "url": "https://anythingwilldo.org/"
+      "website_label": "AWD Org",
+      "role": "Volunteer (Global Youth & Healthcare, ProjectEducate)",
+      "url": "https://anythingwilldo.org/",
+      "sort_order": 0
     },
     {
-      "id": 4,
+      "id": "4",
       "org_name": "STEP For A Better World LEO Club",
-      "role": "Board Member",
-      "website_label": "STEP",
       "badge_text": "LEO",
       "badge_gradient": "linear-gradient(135deg, #c2255c, #66a80f)",
-      "url": "https://stepforabetterworld.org/"
+      "website_label": "STEP",
+      "role": "Board Member",
+      "url": "https://stepforabetterworld.org/",
+      "sort_order": 0
     },
     {
-      "id": 5,
+      "id": "5",
       "org_name": "Biomedical Engineering Society (BMES)",
-      "role": "Student Member",
-      "website_label": "BMES",
       "badge_text": "BMES",
       "badge_gradient": "linear-gradient(135deg, #0c8599, #15aabf)",
-      "url": "https://www.bmes.org/"
+      "website_label": "BMES",
+      "role": "Student Member",
+      "url": "https://www.bmes.org/",
+      "sort_order": 0
     },
     {
-      "id": 6,
+      "id": "6",
       "org_name": "New Jersey Water Environment Association (NJWEA)",
-      "role": "Member",
-      "website_label": "NJWEA",
       "badge_text": "NJ",
       "badge_gradient": "linear-gradient(135deg, #0b7285, #1098ad)",
-      "url": "https://njwea.org/"
+      "website_label": "NJWEA",
+      "role": "Member",
+      "url": "https://njwea.org/",
+      "sort_order": 0
     },
     {
-      "id": 7,
+      "id": "7",
       "org_name": "NCWIT Aspirations in Computing (AiC) Community",
-      "role": "Community Member",
-      "website_label": "NCWIT / AiC",
       "badge_text": "NC",
       "badge_gradient": "linear-gradient(135deg, #5f3dc4, #c2255c)",
-      "url": "https://www.aspirations.org/"
+      "website_label": "NCWIT / AiC",
+      "role": "Community Member",
+      "url": "https://www.aspirations.org/",
+      "sort_order": 0
     }
   ],
   "awards": [
     {
-      "id": 1,
+      "id": "1",
       "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
       "category_pill": "National Winner · 2026",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/uploads/1792835583518_pic1.jpeg",
+      "video_url": "",
       "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
       "link_text": "Read Feature",
       "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
+      "sort_order": 0
+    },
+    {
+      "id": "2",
+      "title": "U.S. Stockholm Junior Water Prize",
+      "category_pill": "Regional Award · 2026",
+      "year": "2026",
+      "image_url": "assets/ref_images/projects_msef-water-award.jpg",
+      "video_url": "",
+      "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
+      "link_text": "",
+      "link_url": "",
       "sort_order": 1
     },
     {
-      "id": 2,
-      "title": "U.S. Stockholm Junior Water Prize",
-      "category_pill": "Regional Award · 2026",
-      "category_group": "research",
+      "id": "3",
+      "title": "NOAA — “Taking the Pulse of the Planet” Award",
+      "category_pill": "Recognition · 2026",
       "year": "2026",
-      "image_url": "assets/ref_images/projects_msef-water-award.jpg",
-      "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
+      "image_url": "assets/nova.jpeg",
+      "video_url": "",
+      "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "",
       "link_url": "",
       "sort_order": 2
     },
     {
-      "id": 3,
-      "title": "NOAA — “Taking the Pulse of the Planet” Award",
-      "category_pill": "Recognition · 2026",
-      "category_group": "research",
+      "id": "4",
+      "title": "Mercer Science & Engineering Fair",
+      "category_pill": "Second Place · 2026",
       "year": "2026",
-      "image_url": "assets/nova.jpeg",
-      "description": "National Oceanic and Atmospheric Administration recognition.",
-      "link_text": "",
-      "link_url": "",
+      "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
+      "video_url": "",
+      "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
+      "link_text": "Learn More",
+      "link_url": "#",
       "sort_order": 3
     },
     {
-      "id": 4,
-      "title": "Mercer Science & Engineering Fair",
-      "category_pill": "Second Place · 2026",
-      "category_group": "research",
-      "year": "2026",
-      "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
-      "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
+      "id": "6",
+      "title": "FIRST LEGO League — NJ Regional & State Awards",
+      "category_pill": "FIRST LEGO League",
+      "year": "2024",
+      "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "video_url": "",
+      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 4
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
-      "category_group": "robotics",
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
+      "video_url": "",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 5
     },
     {
-      "id": 6,
-      "title": "FIRST LEGO League — NJ Regional & State Awards",
-      "category_pill": "FIRST LEGO League",
-      "category_group": "robotics",
+      "id": "7",
+      "title": "Panther Hackathon Best Beginner Hack",
+      "category_pill": "Princeton Day School",
       "year": "2024",
-      "image_url": "assets/robotics/pic 2 - Team award.JPG",
-      "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
-      "link_text": "Learn More",
-      "link_url": "#",
+      "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
+      "video_url": "",
+      "description": "Recognized for a beginner-level hackathon project demonstrating algorithmic problem-solving and rapid prototyping at the Princeton Day School Panther Hackathon.",
+      "link_text": "View Hackathon Project",
+      "link_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
       "sort_order": 6
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "New Jersey Legislative Commendation",
       "category_pill": "State Recognition",
-      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
+      "video_url": "",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 7
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "United Nations — Future of Service Award",
       "category_pill": "Youth Service",
-      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/STEP UN Future of Service.jpeg",
+      "video_url": "",
       "description": "United Nations STEP recognition for youth-led service, hunger relief supply mobilization, and community impact.",
       "link_text": "Learn More",
       "link_url": "#",
       "sort_order": 8
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "The Melvin Jones Fundraiser",
       "category_pill": "Civic Award · Lions Club",
       "year": "2024",
       "image_url": "assets/community/melvin_jones_fundraiser_flyer.jpg",
+      "video_url": "",
       "description": "Fundraising for The Melvin Jones Fellowship supporting Lions Club International across vision, diabetes, environment, childhood cancer, and hunger relief.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 9,
-      "category_group": "civic"
+      "sort_order": 9
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "John H. Imbrie Humanities/English Award",
       "category_pill": "Humanities Program · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
+      "video_url": "",
       "description": "Selected from 150 ninth-grade students for demonstrated excellence in English study within the Humanities program at The Lawrenceville School.",
       "link_text": "",
       "link_url": "",
       "sort_order": 10
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "John Locke International Essay Writing Competition",
       "category_pill": "High Commendation · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/ref_images/projects_john-locke_framed.jpg",
+      "video_url": "",
       "description": "High Commendation in Science & Technology from over 19,000 international entries across 138 nations in the global essay competition.",
       "link_text": "",
       "link_url": "",
       "sort_order": 11
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Harvard International Review (HIR) Summer 2026",
       "category_pill": "Bronze Medal · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/hir_bronze_medal_official_certificate.jpg",
+      "video_url": "",
       "description": "Bronze Medal in the Harvard International Review Academic Writing Competition under the Technology & Innovation theme.",
       "link_text": "View Certificate",
       "link_url": "assets/certificates/hir_bronze_medal_official_certificate.jpg",
       "sort_order": 12
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Scholastic Art & Writing Awards",
       "category_pill": "Silver Keys & Mentions · 2025–2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/scholastic_silver_key_card.jpg",
+      "video_url": "",
       "description": "Two Silver Keys in Poetry and four Honorable Mentions in Personal Essay & Memoir in the nation’s longest-running student recognition program.",
       "link_text": "",
       "link_url": "",
       "sort_order": 13
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Poetry & Creative Fiction Publications",
       "category_pill": "Literary Anthologies · 2024–2026",
-      "category_group": "writing",
       "year": "2024–2026",
       "image_url": "assets/certificates/poetry_publications_card.jpg",
+      "video_url": "",
       "description": "Featured in youth anthologies including Poetic Power, The Telling Room, Skipping Stones, and When the Sink Speaks in The Rev (Top 10 of 150 entries).",
       "link_text": "",
       "link_url": "",
       "sort_order": 14
     },
     {
-      "id": 20,
-      "title": "Music-Fest International Rising Talent Grand Prize",
-      "category_pill": "Classical Piano",
-      "category_group": "arts",
-      "year": "2026",
-      "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
-      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 15
-    },
-    {
-      "id": 22,
-      "title": "North South Foundation National Public Speaking 1st Place",
-      "category_pill": "National Champion",
-      "category_group": "arts",
-      "year": "2024",
-      "image_url": "assets/certificates/nsf_speech_award.png",
-      "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
-      "link_text": "Learn More",
-      "link_url": "#",
-      "sort_order": 16
-    },
-    {
-      "id": 15,
+      "id": "15",
       "title": "Veterans of Foreign Wars — Patriot’s Pen",
       "category_pill": "District & Local Winner · VFW",
-      "category_group": "writing",
       "year": "2024",
       "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
+      "video_url": "",
       "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
       "link_text": "",
       "link_url": "",
+      "sort_order": 15
+    },
+    {
+      "id": "techtrek-1",
+      "title": "AI-Driven Discovery of Solar Fuel Catalysts",
+      "category_pill": "TechTrek · Chemistry",
+      "year": "2024",
+      "image_url": "techtrek/TechTrek Article 1.png",
+      "video_url": "",
+      "description": "Science article published by TechTrek USA exploring machine learning acceleration in clean energy materials discovery.",
+      "link_text": "Read on TechTrek",
+      "link_url": "https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy",
+      "sort_order": 16
+    },
+    {
+      "id": "techtrek-2",
+      "title": "Beyond Textbooks: Reversing the Central Dogma of Biology",
+      "category_pill": "TechTrek · Biology",
+      "year": "2024",
+      "image_url": "techtrek/TechTrek Article 2.png",
+      "video_url": "",
+      "description": "Science article published by TechTrek USA examining non-canonical translation and molecular biology paradigms.",
+      "link_text": "Read on TechTrek",
+      "link_url": "https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology",
       "sort_order": 17
+    },
+    {
+      "id": "20",
+      "title": "Music-Fest International Rising Talent Grand Prize",
+      "category_pill": "Classical Piano",
+      "year": "2026",
+      "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
+      "video_url": "",
+      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 18
+    },
+    {
+      "id": "22",
+      "title": "North South Foundation National Public Speaking 1st Place",
+      "category_pill": "National Champion",
+      "year": "2024",
+      "image_url": "assets/certificates/nsf_speech_award.png",
+      "video_url": "",
+      "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
+      "link_text": "Learn More",
+      "link_url": "#",
+      "sort_order": 19
+    },
+    {
+      "id": "21",
+      "title": "NJMTA Flute Honors Recital Award",
+      "category_pill": "Honors Recital Winner",
+      "year": "2024",
+      "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+      "video_url": "",
+      "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
+      "link_text": "View Flute Honors Certificate",
+      "link_url": "assets/certificates/NJMTA%20Flute%20Honors%20Recital.jpeg",
+      "sort_order": 20
+    },
+    {
+      "id": "biochar",
+      "title": "American Biochar Company",
+      "category_pill": "Industry Spotlight",
+      "year": "2026",
+      "image_url": "assets/american-biochar-card.webp",
+      "video_url": "",
+      "description": "Young Researcher Spotlight feature covering biochar filtration research, PFAS remediation, and environmental innovation.",
+      "link_text": "Read the feature",
+      "link_url": "https://ambiochar.com/what-are-your-desired-outcomes/",
+      "sort_order": 21
+    },
+    {
+      "id": "lawrentian",
+      "title": "The Lawrentian — “One 2 Watch”",
+      "category_pill": "Magazine Feature",
+      "year": "2026",
+      "image_url": "assets/The Lawrentian one 2 watch.jpeg",
+      "video_url": "",
+      "description": "Quarterly school magazine profile following Aadya’s water research and youth-led environmental initiatives.",
+      "link_text": "Read the feature",
+      "link_url": "https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch",
+      "sort_order": 22
+    },
+    {
+      "id": "pds",
+      "title": "Princeton Day School",
+      "category_pill": "School Feature",
+      "year": "2023",
+      "image_url": "projects/writing/pds-feature-2023.webp",
+      "video_url": "",
+      "description": "Featured during middle school celebrating creative writing, poetry honors, and scholastic achievements.",
+      "link_text": "Read the feature",
+      "link_url": "https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/",
+      "sort_order": 23
     }
   ],
   "about": {
@@ -1577,10 +1677,11 @@
   },
   "media": [
     {
-      "id": 1792913171331,
-      "filename": "WhatsApp Image 2026-10-24 at 10.03.05 PM.jpeg",
-      "url": "assets/uploads/1792913169275_WhatsApp_Image_2026-10-24_at_10.03.05_PM.jpeg",
-      "uploaded_at": "2026-10-25T07:26:11.332Z"
+      "id": 1,
+      "filename": "20261023_091817_test_admin_upload.png",
+      "url": "assets/uploads/20261023_091817_test_admin_upload.png",
+      "size_bytes": 0,
+      "uploaded_at": "2026-10-23 03:48:17"
     }
   ]
 }
