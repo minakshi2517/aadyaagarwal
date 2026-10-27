@@ -92,7 +92,30 @@
   // FETCH CMS DATA
   // =========================================================================
   async function getCMSData() {
-    // 1. Live GitHub Contents API (0 second cache, 5,000 req/hr rate limit, instant worldwide)
+    // 1. Check LocalStorage first (instant edits from admin.html in the same browser)
+    const local = localStorage.getItem(CMS_KEY);
+    if (local) {
+      try {
+        const parsed = JSON.parse(local);
+        if (parsed && (parsed.settings || parsed.portfolio || parsed.awards)) {
+          return parsed;
+        }
+      } catch(e) {}
+    }
+
+    // 2. Fetch fresh local/same-origin static JSON with cache: no-store
+    try {
+      const res = await fetch('site_content.json?v=' + Date.now(), { cache: 'no-store' });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && (data.settings || data.portfolio || data.awards)) {
+          try { localStorage.setItem(CMS_KEY, JSON.stringify(data)); } catch(e) {}
+          return data;
+        }
+      }
+    } catch(e) {}
+
+    // 3. Live GitHub Contents API fallback
     try {
       const res = await fetch(`https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/site_content.json?cb=${Date.now()}_${Math.random()}`, {
         headers: {
@@ -116,31 +139,7 @@
       console.warn('GitHub contents fetch notice:', err);
     }
 
-    // 2. Check LocalStorage (instant preview from admin.html in the same browser)
-    const local = localStorage.getItem(CMS_KEY);
-    if (local) {
-      try {
-        const parsed = JSON.parse(local);
-        if (parsed && (parsed.settings || parsed.portfolio || parsed.awards)) {
-          if (Array.isArray(parsed.portfolio)) {
-            parsed.portfolio.forEach(item => {
-              if (item.id === 4 || (item.title && item.title.toLowerCase().includes('comparative biochar'))) {
-                item.badge_position = 'right';
-              }
-              if ((item.id === 14 || item.id === 1792918333524) && Array.isArray(item.sections)) {
-                const hasPhotos = item.sections.some(s => Array.isArray(s.photos) && s.photos.length > 0);
-                if (!hasPhotos) {
-                  try { localStorage.removeItem(CMS_KEY); } catch(e) {}
-                }
-              }
-            });
-          }
-          return parsed;
-        }
-      } catch(e) {}
-    }
-
-    // 3. Raw GitHub CDN fallback
+    // 4. Raw GitHub CDN fallback
     try {
       const ghRes = await fetch(`https://raw.githubusercontent.com/minakshi2517/aadyaagarwal/main/site_content.json?cb=${Date.now()}`, {
         cache: 'no-store'
@@ -151,15 +150,6 @@
           try { localStorage.setItem(CMS_KEY, JSON.stringify(ghData)); } catch(e) {}
           return ghData;
         }
-      }
-    } catch(e) {}
-
-    // 4. Fallback to local static JSON
-    try {
-      const res = await fetch('site_content.json?v=' + Date.now(), { cache: 'no-store' });
-      if (res.ok) {
-        const data = await res.json();
-        return data;
       }
     } catch(e) {}
 
@@ -283,7 +273,7 @@
 
           card.setAttribute('data-project', JSON.stringify({
             id: p.id,
-            modal_img_position: p.modal_img_position || (p.id === 4 ? 'top' : ''),
+            modal_img_position: p.modal_img_position || (p.id === 4 ? 'center 35%' : ''),
             title: p.title,
             category: p.category_name,
             article_url: p.article_url,
@@ -291,12 +281,15 @@
             img: coverImg,
             images: galleryImgs,
             videos: Array.isArray(p.videos) ? p.videos : (
-              (p.title && p.title.toLowerCase().includes('ocean')) ? [{ type: 'local', src: 'projects/videos/3m-buoy-preview.mp4', title: '3M Young Scientist Challenge Submission Video', poster: 'projects/ocean-project-presentation.jpg' }] :
+              (p.title && p.title.toLowerCase().includes('ocean')) ? [{ type: 'local', src: 'projects/videos/3MYSC Submission - Neutralizing Ocean Acidification_ An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems.mp4', title: '3MYSC Submission - Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems', poster: 'projects/ocean-project-presentation.jpg' }] :
               ((p.title && (p.title.toLowerCase().includes('music') || p.title.toLowerCase().includes('theater') || p.title.toLowerCase().includes('speaking'))) ? [{ type: 'local', src: 'projects/videos/music-performance-preview.mp4', title: 'Flute & Piano Recital Performance', poster: 'assets/uploads/1792918305114_Aadya_Flute_Pic1.png', is_placeholder: true }] : [])
             ),
             desc: p.desc,
             highlights: p.highlights || [],
             tags: p.tags || [],
+            sections: p.sections || [],
+            badges: p.badges || [],
+            hide_badges: p.hide_badges,
             attachments: (Array.isArray(p.attachments) && p.attachments.length > 0) ? p.attachments : (
               (p.title && p.title.toLowerCase().includes('monivitals')) ? [{ label: "MoniVitals project board (PDF)", href: "https://drive.google.com/file/d/1ZjMXrRyixVsCfiFuJaEqjXi_TDEurrdv/view?usp=drive_link" }] : []
             ),
@@ -346,8 +339,9 @@
               `</span>`
             : '';
 
-          const isTopAlignedImg = p.id === 4 || (coverImg && coverImg.includes('ieee-attendance')) || (p.title && p.title.toLowerCase().includes('comparative biochar')) || p.img_position === 'top';
-          const imgPosStyle = isTopAlignedImg ? 'style="object-position: center top;"' : (p.img_position ? `style="object-position: ${p.img_position};"` : '');
+          const isServingSC = p.id === 1792997124021 || p.id === '1792997124021' || (coverImg && (coverImg.includes('pic_7_-_SC') || coverImg.includes('1793007676841'))) || (p.title && p.title.toLowerCase().includes('2nd blank tile'));
+          const isTopAlignedImg = isServingSC || p.id === 4 || (coverImg && coverImg.includes('ieee-attendance')) || (p.title && p.title.toLowerCase().includes('comparative biochar')) || p.img_position === 'top';
+          const imgPosStyle = p.img_position ? `style="object-position: ${p.img_position};"` : (isServingSC ? 'style="object-position: 75% 15%;"' : (isTopAlignedImg ? 'style="object-position: center 25%;"' : ''));
 
               const rawCat = (p.category_name || '').trim();
               const displayCat = rawCat.toLowerCase() === 'research' ? '' : rawCat;
@@ -401,40 +395,252 @@
       }
     }
 
-    // 4. AWARDS & DISTINCTIONS SYNC (Dynamic re-ordering, content sync, and additions)
+    // 4. AWARDS & DISTINCTIONS SYNC (Dynamic creation, real-time sync, and re-ordering)
     if (Array.isArray(data.awards) && data.awards.length > 0) {
       const sortedAwards = [...data.awards].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
+      const validAwardIds = new Set(sortedAwards.map(a => String(a.id)));
+
+      function createAwardCardElement(aw) {
+        const card = document.createElement('article');
+        card.className = 'award-visual-card';
+        card.setAttribute('data-award-id', String(aw.id));
+
+        const imgHref = (aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '')
+          ? aw.link_url
+          : (aw.image_url ? window.getResolvedImageSrc(aw.image_url) : '#');
+        const imgSrc = aw.image_url ? window.getResolvedImageSrc(aw.image_url) : 'assets/logo.png';
+        const pillText = `${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}`;
+
+        let linkHtml = '';
+        if (aw.link_url && aw.link_text && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+          linkHtml = `<a class="award-text-link" href="${aw.link_url}" target="_blank" rel="noopener noreferrer">${aw.link_text} <span aria-hidden="true">&nearr;</span></a>`;
+        }
+
+        card.innerHTML = `
+          <a class="award-visual-image-link" href="${imgHref}" target="_blank" rel="noopener noreferrer" aria-label="View ${aw.title}">
+            <img src="${imgSrc}" alt="${aw.title}" loading="lazy">
+          </a>
+          <div class="award-visual-content">
+            <span class="award-year-pill">${pillText}</span>
+            <h3>${aw.title}</h3>
+            <p>${aw.description || ''}</p>
+            ${linkHtml}
+          </div>
+        `;
+        return card;
+      }
+
+      function updateAwardCardElement(card, aw) {
+        card.setAttribute('data-award-id', String(aw.id));
+        const titleEl = card.querySelector('h3');
+        if (titleEl && aw.title) titleEl.textContent = aw.title;
+
+        const imgEl = card.querySelector('img');
+        if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
+
+        const imgLink = card.querySelector('a.award-visual-image-link');
+        if (imgLink && card.id !== 'mitSolveCard') {
+          if (aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+            imgLink.href = aw.link_url;
+          } else if (aw.image_url) {
+            imgLink.href = window.getResolvedImageSrc(aw.image_url);
+          }
+        }
+
+        const pillEl = card.querySelector('.award-year-pill');
+        if (pillEl && (aw.category_pill || aw.year)) {
+          pillEl.textContent = `${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}`;
+        }
+
+        const descEl = card.querySelector('p');
+        if (descEl && aw.description !== undefined) descEl.textContent = aw.description;
+
+        if (aw.link_url && aw.link_text && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+          let linkEl = card.querySelector('.award-text-link');
+          if (!linkEl) {
+            linkEl = document.createElement('a');
+            linkEl.className = 'award-text-link';
+            linkEl.target = '_blank';
+            linkEl.rel = 'noopener noreferrer';
+            const contentDiv = card.querySelector('.award-visual-content');
+            if (contentDiv) contentDiv.appendChild(linkEl);
+          }
+          linkEl.href = aw.link_url;
+          linkEl.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
+        } else {
+          const existingLink = card.querySelector('.award-text-link');
+          if (existingLink) existingLink.remove();
+        }
+      }
+
+      function getNormalizedAwardGroup(aw) {
+        const sId = String(aw.id).toLowerCase();
+        const raw = (aw.category_group || '').toLowerCase().trim();
+        if (raw === 'featured' || sId === 'biochar' || sId === 'lawrentian' || sId === 'pds') return 'featured';
+        if (raw === 'research') return 'research';
+        if (raw === 'robotics') return 'robotics';
+        if (raw === 'civic') return 'civic';
+        if (raw === 'writing' || raw === 'humanities' || raw === 'publication') return 'writing';
+        if (raw === 'arts' || raw === 'music' || raw === 'speaking') return 'arts';
+        
+        // Fallback by ID
+        if (['1', '2', '3', '4'].includes(sId)) return 'research';
+        if (['6', '5', '7'].includes(sId)) return 'robotics';
+        if (['8', '9', '23'].includes(sId)) return 'civic';
+        if (['17', '10', '11', '12', '14', '15', 'techtrek-1', 'techtrek-2'].includes(sId)) return 'writing';
+        if (['20', '22', '21'].includes(sId)) return 'arts';
+        return 'research';
+      }
 
       // 4A. Update awards on awards.html (Visual cards matching by ID or title and re-ordering in grid)
-      const sectionConfigs = [
-        { selector: '#research-awards .awards-feature-grid', group: 'research', ids: [1, 2, 3, 4] },
-        { selector: '#robotics-awards .awards-feature-grid', group: 'robotics', ids: [6, 5, 7] },
-        { selector: '#civic-awards .awards-feature-grid', group: 'civic', ids: [8, 9, 23] },
-        { selector: '#writing-awards > .container > .awards-feature-grid', group: 'writing', ids: [17, 10, 11, 12, 14, 15] },
-        { selector: '#music-speaking-awards .awards-feature-grid', group: 'arts', ids: [20, 22, 21] }
-      ];
+      const sectionGrids = {
+        'research': document.querySelector('#research-awards .awards-feature-grid'),
+        'robotics': document.querySelector('#robotics-awards .awards-feature-grid'),
+        'civic': document.querySelector('#civic-awards .awards-feature-grid'),
+        'writing': document.querySelector('#writing-awards > .container > .awards-feature-grid'),
+        'arts': document.querySelector('#music-speaking-awards .awards-feature-grid')
+      };
+      const techtrekGrid = document.querySelector('.techtrek-article-grid');
+      const isAwardsPage = !!(sectionGrids.research || sectionGrids.robotics || sectionGrids.writing);
 
-      sectionConfigs.forEach(conf => {
-        const grid = document.querySelector(conf.selector);
-        if (!grid) return;
-
-        // Strictly match awards that belong to this section
-        const sectionAwards = sortedAwards.filter(aw => {
-          const grp = (aw.category_group || '').toLowerCase();
-          if (conf.group === 'writing') {
-            return grp === 'writing' || grp === 'humanities' || conf.ids.includes(aw.id);
+      if (isAwardsPage) {
+        // Immediate clean up: Remove any stray or dynamically added featured cards from research or writing sections
+        document.querySelectorAll('#research-awards [data-award-id="biochar"], #research-awards [data-award-id="lawrentian"], #research-awards [data-award-id="pds"], #writing-awards [data-award-id="biochar"], #writing-awards [data-award-id="lawrentian"], #writing-awards [data-award-id="pds"]').forEach(el => el.remove());
+        document.querySelectorAll('#research-awards .award-visual-card, #writing-awards .award-visual-card').forEach(c => {
+          const t = (c.querySelector('h3')?.textContent || '').toLowerCase();
+          if (t.includes('biochar company') || t.includes('lawrentian') || (t.includes('princeton day') && !t.includes('hackathon'))) {
+            c.remove();
           }
-          return grp === conf.group || conf.ids.includes(aw.id);
         });
 
-        if (sectionAwards.length === 0) return;
+        const allExistingCards = Array.from(document.querySelectorAll('.award-visual-card'));
 
-        const existingCards = Array.from(grid.querySelectorAll('.award-visual-card'));
+        const categorized = {
+          'research': [],
+          'robotics': [],
+          'civic': [],
+          'writing': [],
+          'arts': []
+        };
 
-        sectionAwards.forEach(aw => {
-          let card = existingCards.find(c => {
+        sortedAwards.forEach(aw => {
+          const sId = String(aw.id).toLowerCase();
+          if (sId === 'biochar' || sId === 'lawrentian' || sId === 'pds') {
+            aw.category_group = 'featured';
+          }
+          const grp = getNormalizedAwardGroup(aw);
+          if (grp === 'featured') return; // Handled strictly in #featured-in section
+          if (categorized[grp]) categorized[grp].push(aw);
+          else categorized['research'].push(aw);
+        });
+
+        Object.keys(sectionGrids).forEach(grpKey => {
+          const grid = sectionGrids[grpKey];
+          if (!grid) return;
+
+          const groupAwards = categorized[grpKey];
+
+          groupAwards.forEach(aw => {
+            const sId = String(aw.id);
+            const isTechTrek = (sId === 'techtrek-1' || sId === 'techtrek-2' || (aw.title && aw.title.toLowerCase().includes('techtrek')));
+            const targetContainer = (isTechTrek && techtrekGrid) ? techtrekGrid : grid;
+
+            let card = allExistingCards.find(c => {
+              const idAttr = c.getAttribute('data-award-id');
+              if (idAttr && String(idAttr) === sId) return true;
+              const h3 = c.querySelector('h3');
+              if (!h3) return false;
+              const t = h3.textContent.trim().toLowerCase();
+              const awT = (aw.title || '').trim().toLowerCase();
+              return t === awT || (t.length > 8 && awT.includes(t.slice(0, 15))) || (awT.length > 8 && t.includes(awT.slice(0, 15)));
+            });
+
+            if (card) {
+              updateAwardCardElement(card, aw);
+            } else {
+              card = createAwardCardElement(aw);
+              allExistingCards.push(card);
+            }
+
+            targetContainer.appendChild(card);
+          });
+        });
+
+        // Sync Section 06: Featured in (Industry Website . School Magazine)
+        function updateFeaturedCard(cardId, aw, modalId) {
+          const card = document.getElementById(cardId);
+          if (!card || !aw) return;
+          card.setAttribute('data-award-id', String(aw.id));
+          const img = card.querySelector('img.featured-publication-image');
+          if (img && aw.image_url) {
+            img.src = window.getResolvedImageSrc(aw.image_url);
+          }
+          const h3 = card.querySelector('.featured-publication-copy h3');
+          if (h3 && aw.title) {
+            h3.textContent = aw.title;
+          }
+          const p = card.querySelector('.featured-publication-copy p');
+          if (p && aw.description !== undefined) {
+            p.textContent = aw.description;
+          }
+          const link = card.querySelector('.featured-publication-copy a.award-text-link');
+          if (link) {
+            if (aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+              link.href = aw.link_url;
+            }
+            if (aw.link_text) {
+              link.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
+            }
+          }
+          if (modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+              const mImg = modal.querySelector('.biochar-modal-img');
+              if (mImg && aw.image_url) mImg.src = window.getResolvedImageSrc(aw.image_url);
+              const mTitle = modal.querySelector('.biochar-modal-footer h4');
+              if (mTitle && aw.title) mTitle.textContent = aw.title;
+              const mDesc = modal.querySelector('.biochar-modal-footer p');
+              if (mDesc && aw.description) mDesc.textContent = aw.description;
+              const mBtn = modal.querySelector('.biochar-open-btn');
+              if (mBtn && aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '') {
+                mBtn.href = aw.link_url;
+              }
+            }
+          }
+        }
+
+        const featuredAwards = sortedAwards.filter(aw => getNormalizedAwardGroup(aw) === 'featured');
+        featuredAwards.forEach(aw => {
+          const sId = String(aw.id).toLowerCase();
+          const t = (aw.title || '').toLowerCase();
+          if (sId === 'biochar' || t.includes('biochar')) {
+            updateFeaturedCard('biocharCard', aw, 'biocharImageModal');
+          } else if (sId === 'lawrentian' || t.includes('lawrentian')) {
+            updateFeaturedCard('lawrentianCard', aw, 'lawrentianImageModal');
+          } else if (sId === 'pds' || t.includes('princeton day')) {
+            updateFeaturedCard('pdsCard', aw, 'pdsImageModal');
+          }
+        });
+
+        // Remove cards no longer in data.awards
+        allExistingCards.forEach(c => {
+          const cId = c.getAttribute('data-award-id');
+          if (cId && !validAwardIds.has(cId)) {
+            c.remove();
+          }
+        });
+      }
+
+      // 4B. Update awards on index.html (#awards section)
+      const homeAwardsGrid = document.querySelector('#awards .grid, #awards [class*="grid"], #awards .awards-feature-grid');
+      if (homeAwardsGrid) {
+        const homeCards = Array.from(homeAwardsGrid.querySelectorAll('.award-visual-card, .award-feature-card'));
+
+        sortedAwards.forEach(aw => {
+          const sId = String(aw.id);
+          let card = homeCards.find(c => {
             const idAttr = c.getAttribute('data-award-id');
-            if (idAttr && String(idAttr) === String(aw.id)) return true;
+            if (idAttr && String(idAttr) === sId) return true;
             const h3 = c.querySelector('h3');
             if (!h3) return false;
             const t = h3.textContent.trim().toLowerCase();
@@ -443,89 +649,21 @@
           });
 
           if (card) {
-            const titleEl = card.querySelector('h3');
-            if (titleEl && aw.title) titleEl.textContent = aw.title;
-
-            const imgEl = card.querySelector('img');
-            if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
-
-            const imgLink = card.querySelector('a.award-visual-image-link');
-            if (imgLink) {
-              if (aw.link_url && aw.link_url !== '#' && aw.link_url.trim() !== '') {
-                imgLink.href = aw.link_url;
-              } else if (aw.image_url) {
-                imgLink.href = window.getResolvedImageSrc(aw.image_url);
-              }
-            }
-
-            const pillEl = card.querySelector('.award-year-pill');
-            if (pillEl && (aw.category_pill || aw.year)) {
-              pillEl.textContent = `${aw.category_pill || 'Award'}${aw.year ? ' · ' + aw.year : ''}`;
-            }
-
-            const descEl = card.querySelector('p');
-            if (descEl && aw.description) descEl.textContent = aw.description;
-
-            if (aw.link_url && aw.link_text && aw.link_url !== '#' && aw.link_url.trim() !== '') {
-              let linkEl = card.querySelector('.award-text-link');
-              if (!linkEl) {
-                linkEl = document.createElement('a');
-                linkEl.className = 'award-text-link';
-                linkEl.target = '_blank';
-                linkEl.rel = 'noopener noreferrer';
-                const contentDiv = card.querySelector('.award-visual-content');
-                if (contentDiv) contentDiv.appendChild(linkEl);
-              }
-              linkEl.href = aw.link_url;
-              linkEl.innerHTML = `${aw.link_text} <span aria-hidden="true">&nearr;</span>`;
-            } else {
-              const existingLink = card.querySelector('.award-text-link');
-              if (existingLink) {
-                existingLink.remove();
-              }
-            }
-
-            card.setAttribute('data-award-id', String(aw.id));
-            grid.appendChild(card);
+            updateAwardCardElement(card, aw);
+          } else {
+            card = createAwardCardElement(aw);
+            homeCards.push(card);
           }
+          homeAwardsGrid.appendChild(card);
         });
 
-        // Ensure defined conf.ids order is strictly honored
-        if (Array.isArray(conf.ids) && conf.ids.length > 0) {
-          conf.ids.forEach(id => {
-            const card = grid.querySelector(`[data-award-id="${id}"]`);
-            if (card) grid.appendChild(card);
-          });
-        }
-      });
-
-      // 4B. Update awards on index.html (#awards section)
-      const homeAwardsGrid = document.querySelector('#awards .grid, #awards [class*="grid"]');
-      if (homeAwardsGrid) {
-        const homeCards = Array.from(homeAwardsGrid.querySelectorAll('.award-feature-card'));
-        if (homeCards.length > 0) {
-          sortedAwards.forEach(aw => {
-            const card = homeCards.find(c => {
-              const idAttr = c.getAttribute('data-award-id');
-              if (idAttr && String(idAttr) === String(aw.id)) return true;
-              const h3 = c.querySelector('h3');
-              if (!h3) return false;
-              const t = h3.textContent.trim().toLowerCase();
-              const awT = (aw.title || '').trim().toLowerCase();
-              return t === awT || t.includes(awT.slice(0, 15)) || awT.includes(t.slice(0, 15));
-            });
-            if (card) {
-              card.setAttribute('data-award-id', String(aw.id));
-              const titleEl = card.querySelector('h3');
-              if (titleEl && aw.title) titleEl.textContent = aw.title;
-              const imgEl = card.querySelector('img');
-              if (imgEl && aw.image_url) imgEl.src = window.getResolvedImageSrc(aw.image_url);
-              const descEl = card.querySelector('p');
-              if (descEl && aw.description) descEl.textContent = aw.description;
-              homeAwardsGrid.appendChild(card);
-            }
-          });
-        }
+        // Remove cards no longer in data.awards
+        homeCards.forEach(c => {
+          const cId = c.getAttribute('data-award-id');
+          if (cId && !validAwardIds.has(cId)) {
+            c.remove();
+          }
+        });
       }
 
       // Conference Featured Video card sync (awards.html)
