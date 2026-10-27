@@ -73,20 +73,18 @@
               innovation.</p>
           </header>
           <div class="awards-feature-grid">
-            <article class="award-visual-card" data-award-id="1">
-              <a class="award-visual-image-link"
-                href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab"
-                target="_blank" rel="noopener noreferrer" aria-label="Read the Lawrenceville story about MIT Solve">
+            <article class="award-visual-card featured-publication-link" id="mitSolveCard" data-award-id="1" style="cursor: pointer;" role="button" tabindex="0" aria-label="View MIT Solve recognition image and feature">
+              <div class="award-visual-image-link" style="position: relative;">
                 <img src="assets/uploads/1792835583518_pic1.jpeg" alt="MIT Solve recognition at the MIT Media Lab"
                   loading="lazy">
-              </a>
+              </div>
               <div class="award-visual-content">
                 <span class="award-year-pill">National Winner · 2026</span>
                 <h3>MIT Solve — AI for a Better World Youth Innovation Challenge</h3>
                 <p>One of five national winners; presented the water-quality project at the MIT Media Lab.</p>
                 <a class="award-text-link"
                   href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab"
-                  target="_blank" rel="noopener noreferrer">Read the Lawrenceville feature <span
+                  target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Read the Lawrenceville feature <span
                     aria-hidden="true">↗</span></a>
               </div>
             </article>
@@ -334,7 +332,7 @@
               <p>Biology &amp; Chemistry Associate for the school chapter, supporting chapter content and subject-area
                 coordination.</p>
               <div class="awards-feature-grid awards-feature-grid-two techtrek-article-grid">
-                <article class="award-visual-card">
+                <article class="award-visual-card" data-award-id="techtrek-1">
                   <a class="award-visual-image-link"
                     href="https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy"
                     target="_blank" rel="noopener noreferrer"
@@ -351,7 +349,7 @@
                       target="_blank" rel="noopener noreferrer">Read on TechTrek <span aria-hidden="true">↗</span></a>
                   </div>
                 </article>
-                <article class="award-visual-card">
+                <article class="award-visual-card" data-award-id="techtrek-2">
                   <a class="award-visual-image-link"
                     href="https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology"
                     target="_blank" rel="noopener noreferrer" aria-label="Read TechTrek article: Beyond Textbooks">
@@ -443,7 +441,7 @@
                 <h3>NJMTA Flute Honors Recital Award</h3>
                 <p>Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive
                   school and regional wind ensembles.</p>
-                <a class="award-text-link" href="portfolio.html">Recital & Ensemble Details <span
+                <a class="award-text-link" href="assets/certificates/NJMTA%20Flute%20Honors%20Recital.jpeg" target="_blank" rel="noopener noreferrer">View Flute Honors Certificate <span
                     aria-hidden="true">↗</span></a>
               </div>
             </article>
@@ -549,6 +547,30 @@
 
     </main>
 
+    <!-- MIT Solve 2-Step Click Image Modal -->
+    <div id="mitSolveImageModal" class="biochar-modal-backdrop" style="display: none;" role="dialog" aria-modal="true"
+      aria-label="MIT Solve Recognition at the MIT Media Lab">
+      <div class="biochar-modal-dialog">
+        <button type="button" class="biochar-modal-close" aria-label="Close modal">&times;</button>
+        <div class="biochar-modal-link" title="Click to open Lawrenceville feature article">
+          <div class="biochar-modal-img-frame">
+            <img src="assets/uploads/1792835583518_pic1.jpeg"
+              alt="MIT Solve recognition at the MIT Media Lab" class="biochar-modal-img">
+          </div>
+        </div>
+        <div class="biochar-modal-footer">
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: #fff; margin: 0;">MIT Solve — AI for a Better World</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 4px 0 0 0;">National Winner · Presented at MIT Media Lab · Click anywhere to view the Lawrenceville feature</p>
+          </div>
+          <a href="https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab"
+            target="_blank" rel="noopener noreferrer" class="biochar-open-btn">
+            <span>Read Lawrenceville Feature ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Biochar 2-Step Click Image Modal -->
     <div id="biocharImageModal" class="biochar-modal-backdrop" style="display: none;" role="dialog" aria-modal="true"
       aria-label="American Biochar Company Young Researcher Spotlight">
@@ -635,7 +657,7 @@
     </footer>
   </div>
   <script src="modern-script.js?v=250"></script>
-  <script src="cms-loader.js?v=9"></script>
+  <script src="cms-loader.js?v=11"></script>
   <script src="remove-visible-numbers.js?v=2"></script>
   <script>
     (function () {
@@ -688,6 +710,7 @@
         });
       }
 
+      setupTwoStepModal('mitSolveCard', 'mitSolveImageModal', 'https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab');
       setupTwoStepModal('biocharCard', 'biocharImageModal', 'https://ambiochar.com/what-are-your-desired-outcomes/');
       setupTwoStepModal('lawrentianCard', 'lawrentianImageModal', 'https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch');
       setupTwoStepModal('pdsCard', 'pdsImageModal', 'https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/');
