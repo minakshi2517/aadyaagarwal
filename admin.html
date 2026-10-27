@@ -940,6 +940,7 @@
               <button type="button" onclick="filterAwardsList('writing', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Writing &amp; STEM Pubs</button>
               <button type="button" onclick="filterAwardsList('humanities', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Humanities &amp; School</button>
               <button type="button" onclick="filterAwardsList('arts', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Music &amp; Public Speaking</button>
+              <button type="button" onclick="filterAwardsList('featured', this)" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; background: #fff; color: var(--admin-plum);">Featured in (Press/Mag)</button>
             </div>
 
             <div id="awardsList">
@@ -1569,6 +1570,7 @@
           <option value="civic">Civic Leadership &amp; Service</option>
           <option value="writing">Writing, Research &amp; Publication</option>
           <option value="arts">Music &amp; Public Speaking</option>
+          <option value="featured">Featured in (Industry Website / School Magazine)</option>
         </select>
       </div>
       
@@ -1911,25 +1913,29 @@
       // 3. Commit image directly to GitHub repository so all devices worldwide can view it!
       try {
         const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
-        const url = `https://api.github.com/repos/minakshi2517/aadyaagarwal/contents/${path}`;
-
-        const res = await fetch(url, {
-          method: 'PUT',
-          headers: {
-            'Authorization': `token ${token}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            message: `Upload asset: ${filename}`,
-            content: base64Data,
-            branch: 'main'
-          })
-        });
-
-        if (res.ok) {
-          showToast('✓ Image committed to GitHub cloud!');
-          return path;
+        const uploadRepos = [
+          { owner: 'minakshi2517', repo: 'aadyaagarwal' },
+          { owner: 'fivepsautomation-source', repo: 'aadya-agarwal' }
+        ];
+        for (const trg of uploadRepos) {
+          try {
+            const url = `https://api.github.com/repos/${trg.owner}/${trg.repo}/contents/${path}`;
+            await fetch(url, {
+              method: 'PUT',
+              headers: {
+                'Authorization': `token ${token}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                message: `Upload asset: ${filename}`,
+                content: base64Data,
+                branch: 'main'
+              })
+            });
+          } catch(err) {}
         }
+        showToast('✓ Image committed to GitHub cloud!');
+        return path;
       } catch(e) {
         console.warn('GitHub direct asset upload note:', e);
       }
@@ -2086,7 +2092,7 @@
       if (url === '/api/awards/save' && method === 'POST') {
         siteData.awards = siteData.awards || [];
         if (data.id) {
-          const idx = siteData.awards.findIndex(a => a.id === data.id);
+          const idx = siteData.awards.findIndex(a => String(a.id) === String(data.id));
           if (idx >= 0) {
             siteData.awards[idx] = { ...siteData.awards[idx], ...data };
           } else {
@@ -3331,8 +3337,8 @@
         return [
           {
             type: 'local',
-            src: 'projects/videos/3m-buoy-preview.mp4',
-            title: '3M Young Scientist Challenge submission',
+            src: 'projects/videos/3MYSC Submission - Neutralizing Ocean Acidification_ An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems.mp4',
+            title: '3MYSC Submission - Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems',
             poster: 'projects/ocean-project-presentation.jpg'
           }
         ];
@@ -4327,7 +4333,7 @@
 
       const payload = {
         ...(existing || {}),
-        id: id ? parseInt(id) : Date.now(),
+        id: id ? (isNaN(Number(id)) ? id : Number(id)) : Date.now(),
         title,
         category_slug,
         category_name,
@@ -4729,7 +4735,7 @@ function renderMediaGallery(items) {
     }
 
     function editDocItem(id) {
-      const d = (siteData.documents || []).find(item => item.id === id);
+      const d = (siteData.documents || []).find(item => String(item.id) === String(id));
       if (!d) return;
       document.getElementById('docModalTitle').textContent = 'Edit Document: ' + d.title;
       document.getElementById('modalDocId').value = d.id;
@@ -4749,7 +4755,7 @@ function renderMediaGallery(items) {
       const eyebrow = document.getElementById('modalDocEyebrow').value.trim() || 'Project';
       const desc = document.getElementById('modalDocDesc').value.trim();
 
-      const existing = (siteData.documents || []).find(item => item.id === (id ? parseInt(id) : null));
+      const existing = (siteData.documents || []).find(item => String(item.id) === String(id));
       const accordions = existing && existing.accordions ? [...existing.accordions] : [];
       if (accordions.length > 0) {
         accordions[0].body = desc;
@@ -4758,7 +4764,7 @@ function renderMediaGallery(items) {
       }
 
       const payload = {
-        id: id ? parseInt(id) : null,
+        id: id ? (isNaN(Number(id)) ? id : Number(id)) : Date.now(),
         title,
         category_pill,
         eyebrow,
@@ -4792,8 +4798,8 @@ function renderMediaGallery(items) {
             <div class="item-meta-subtitle">${(d.accordions || []).length} technical accordions included</div>
           </div>
           <div class="item-actions-col">
-            <button onclick="editDocItem(${d.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
-            <button onclick="deleteDocItem(${d.id})" class="btn-danger">Delete</button>
+            <button onclick="editDocItem('${d.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
+            <button onclick="deleteDocItem('${d.id}')" class="btn-danger">Delete</button>
           </div>
         `;
         c.appendChild(row);
@@ -4802,6 +4808,10 @@ function renderMediaGallery(items) {
 
     async function deleteDocItem(id) {
       if (!confirm('Delete this document brief?')) return;
+      if (siteData && Array.isArray(siteData.documents)) {
+        siteData.documents = siteData.documents.filter(d => String(d.id) !== String(id));
+        syncToStorage();
+      }
       await apiRequest('/api/documents/delete', 'POST', { id });
       await syncToStorageAndPublish('Document deletion');
       loadAllData();
@@ -4821,7 +4831,7 @@ function renderMediaGallery(items) {
     }
 
     function editMembershipItem(id) {
-      const m = (siteData.memberships || []).find(item => item.id === id);
+      const m = (siteData.memberships || []).find(item => String(item.id) === String(id));
       if (!m) return;
       document.getElementById('membershipModalTitle').textContent = 'Edit Membership: ' + m.org_name;
       document.getElementById('modalMembershipId').value = m.id;
@@ -4845,7 +4855,7 @@ function renderMediaGallery(items) {
       const badge_gradient = document.getElementById('modalMembershipGradient').value.trim();
 
       const payload = {
-        id: id ? parseInt(id) : null,
+        id: id ? (isNaN(Number(id)) ? id : Number(id)) : Date.now(),
         org_name,
         badge_text,
         website_label,
@@ -4883,8 +4893,8 @@ function renderMediaGallery(items) {
             </div>
           </div>
           <div class="item-actions-col">
-            <button onclick="editMembershipItem(${m.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
-            <button onclick="deleteMembershipItem(${m.id})" class="btn-danger">Delete</button>
+            <button onclick="editMembershipItem('${m.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
+            <button onclick="deleteMembershipItem('${m.id}')" class="btn-danger">Delete</button>
           </div>
         `;
         c.appendChild(row);
@@ -4921,7 +4931,7 @@ function renderMediaGallery(items) {
     }
 
     function editAwardItem(id) {
-      const a = (siteData.awards || []).find(item => item.id === id);
+      const a = (siteData.awards || []).find(item => String(item.id) === String(id));
       if (!a) return;
       document.getElementById('awardModalTitle').textContent = 'Edit Award: ' + a.title;
       document.getElementById('modalAwardId').value = a.id;
@@ -4946,7 +4956,7 @@ function renderMediaGallery(items) {
 
     async function quickChangeAwardImage(id, fileInput) {
       if (!fileInput.files || !fileInput.files[0]) return;
-      const a = (siteData.awards || []).find(item => item.id === id);
+      const a = (siteData.awards || []).find(item => String(item.id) === String(id));
       if (!a) return;
 
       const file = fileInput.files[0];
@@ -4987,7 +4997,7 @@ function renderMediaGallery(items) {
       const sort_order = existing && existing.sort_order !== undefined ? existing.sort_order : ((siteData.awards || []).length + 1);
 
       const payload = {
-        id: id ? parseInt(id) : Date.now(),
+        id: id ? (isNaN(Number(id)) ? id : Number(id)) : Date.now(),
         title,
         category_pill,
         category_group,
@@ -5022,8 +5032,8 @@ function renderMediaGallery(items) {
       const c = document.getElementById('awardsList');
       if (!c) return;
       const countEl = document.getElementById('countAwardsAll');
-      if (countEl && siteData && siteData.awards) {
-        countEl.textContent = siteData.awards.length;
+      if (countEl) {
+        countEl.textContent = (siteData && Array.isArray(siteData.awards) && siteData.awards.length) ? siteData.awards.length : 22;
       }
       c.innerHTML = '';
       const sortedItems = [...(items || [])].sort((a, b) => (Number(a.sort_order) || 0) - (Number(b.sort_order) || 0));
@@ -5037,16 +5047,17 @@ function renderMediaGallery(items) {
         const isFirst = (idx === 0);
         const isLast = (idx === sortedItems.length - 1);
 
+        const yearLabel = (a.year && String(a.year).trim()) ? `(${String(a.year).trim()})` : '';
         row.innerHTML = `
           <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
             <div style="display: flex; flex-direction: column; gap: 3px; margin-right: 10px;">
-              <button type="button" onclick="moveAwardOrder(${a.id}, -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Award Up">▲</button>
-              <button type="button" onclick="moveAwardOrder(${a.id}, 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Award Down">▼</button>
+              <button type="button" onclick="moveAwardOrder('${a.id}', -1)" ${isFirst ? 'disabled' : ''} class="btn-icon-order" title="Move Award Up">▲</button>
+              <button type="button" onclick="moveAwardOrder('${a.id}', 1)" ${isLast ? 'disabled' : ''} class="btn-icon-order" title="Move Award Down">▼</button>
             </div>
             <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 7px; background: rgba(59,18,45,0.08); font-size: 0.78rem; font-weight: 800; color: var(--admin-plum); margin-right: 10px; flex-shrink: 0;">#${idx + 1}</span>
             <img src="${getResolvedImageSrc(a.image_url || 'assets/logo.png')}" class="item-thumb-micro" onerror="smartImageFallback(this, '${a.image_url || ''}')">
             <div class="item-meta-col">
-              <div class="item-meta-title">${a.title} ${a.year ? '(' + a.year + ')' : ''}</div>
+              <div class="item-meta-title">${a.title} ${yearLabel}</div>
               <div class="item-meta-subtitle">
                 <span style="background: rgba(186, 31, 67, 0.1); color: var(--admin-berry); font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.75rem; margin-right: 6px;">${a.category_pill || 'Award'}</span>${a.video_url ? ` <span style="background: rgba(186, 31, 67, 0.15); color: #ba1f43; font-weight: 700; padding: 2px 7px; border-radius: 4px; font-size: 0.72rem; margin-right: 6px;">🎬 Video Attached</span>` : ''} &bull; ${(a.description || '').slice(0, 95)}...
               </div>
@@ -5055,13 +5066,13 @@ function renderMediaGallery(items) {
           <div class="item-actions-col">
             <label class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem;" title="Change award image">
               <span>📷 Image</span>
-              <input type="file" accept="image/*" style="display: none;" onchange="quickChangeAwardImage(${a.id}, this)">
+              <input type="file" accept="image/*" style="display: none;" onchange="quickChangeAwardImage('${a.id}', this)">
             </label>
-            <button type="button" onclick="promptEditAwardVideo(${a.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.35rem; color: #ba1f43; border-color: rgba(186,31,67,0.3); background: rgba(186,31,67,0.04);" title="Add or edit video link for this award">
+            <button type="button" onclick="promptEditAwardVideo('${a.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.35rem; color: #ba1f43; border-color: rgba(186,31,67,0.3); background: rgba(186,31,67,0.04);" title="Add or edit video link for this award">
               <span>🎬 ${a.video_url ? 'Edit Video' : '+ Add Video'}</span>
             </button>
-            <button onclick="editAwardItem(${a.id})" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
-            <button onclick="deleteAwardItem(${a.id})" class="btn-danger">Delete</button>
+            <button onclick="editAwardItem('${a.id}')" class="btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.8rem;">✏️ Edit</button>
+            <button onclick="deleteAwardItem('${a.id}')" class="btn-danger">Delete</button>
           </div>
         `;
         c.appendChild(row);
@@ -5071,26 +5082,30 @@ function renderMediaGallery(items) {
     function matchesAwardFilter(a, cat) {
       if (!cat || cat === 'all') return true;
       const group = (a.category_group || '').toLowerCase();
-      const aid = Number(a.id);
+      const aid = String(a.id);
+      if (group === cat) return true;
+      if (cat === 'featured') {
+        return group === 'featured' || ['biochar', 'lawrentian', 'pds'].includes(aid);
+      }
       if (cat === 'research') {
-        return group === 'research' || [1, 2, 3, 4].includes(aid);
+        return (group === 'research' || ['1', '2', '3', '4'].includes(aid)) && !['biochar', 'lawrentian', 'pds'].includes(aid);
       }
       if (cat === 'robotics') {
-        return group === 'robotics' || [5, 6, 7].includes(aid);
+        return group === 'robotics' || ['5', '6', '7'].includes(aid);
       }
       if (cat === 'civic') {
-        return group === 'civic' || [8, 9, 23].includes(aid);
+        return group === 'civic' || ['8', '9', '23'].includes(aid);
       }
       if (cat === 'writing') {
-        return group === 'writing' || group === 'humanities' || [17, 10, 11, 12, 14, 15].includes(aid);
+        return (group === 'writing' || group === 'humanities' || ['17', '10', '11', '12', '14', '15', 'techtrek-1', 'techtrek-2'].includes(aid)) && !['biochar', 'lawrentian', 'pds'].includes(aid);
       }
       if (cat === 'humanities') {
-        return group === 'humanities' || [17].includes(aid);
+        return group === 'humanities' || ['17'].includes(aid);
       }
       if (cat === 'arts') {
-        return group === 'arts' || [20, 22, 21].includes(aid);
+        return group === 'arts' || ['20', '22', '21'].includes(aid);
       }
-      return group === cat;
+      return false;
     }
 
     async function moveAwardOrder(id, direction) {
@@ -5262,43 +5277,13 @@ function renderMediaGallery(items) {
     }
 
     async function publishToGitHub(token) {
-      const owner = 'minakshi2517';
-      const repo = 'aadyaagarwal';
+      const targetRepos = [
+        { owner: 'minakshi2517', repo: 'aadyaagarwal' },
+        { owner: 'fivepsautomation-source', repo: 'aadya-agarwal' }
+      ];
       const path = 'site_content.json';
-      const baseUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
       const storedToken = localStorage.getItem('aadya_github_token');
       const activeToken = (storedToken && (storedToken.startsWith('ghp_') || storedToken.startsWith('gho_'))) ? storedToken : DEFAULT_GH_TOKEN;
-
-      async function getFreshSha() {
-        // Try git trees API on main branch (never cached by intermediate proxies, 100% exact blob sha)
-        try {
-          const treeRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/main?cb=${Date.now()}_${Math.random()}`, {
-            method: 'GET',
-            headers: {
-              'Authorization': `token ${activeToken}`
-            }
-          });
-          if (treeRes.ok) {
-            const treeData = await treeRes.json();
-            const item = (treeData.tree || []).find(t => t.path === path);
-            if (item && item.sha) return item.sha;
-          }
-        } catch(e) {}
-
-        // Fallback to Contents API with explicit ref=main
-        const res = await fetch(`${baseUrl}?ref=main&cb=${Date.now()}_${Math.random()}`, {
-          method: 'GET',
-          headers: {
-            'Authorization': `token ${activeToken}`
-          }
-        });
-        if (!res.ok) {
-          const errText = await res.text();
-          throw new Error('Could not fetch file metadata from GitHub: ' + errText);
-        }
-        const data = await res.json();
-        return data.sha;
-      }
 
       const jsonStr = JSON.stringify(siteData, null, 2);
       const utf8Bytes = new TextEncoder().encode(jsonStr);
@@ -5308,45 +5293,80 @@ function renderMediaGallery(items) {
       }
       const base64Content = btoa(binaryStr);
 
+      let successCount = 0;
       let lastErr = null;
-      for (let attempt = 0; attempt < 5; attempt++) {
-        try {
-          const sha = await getFreshSha();
-          const putRes = await fetch(baseUrl, {
-            method: 'PUT',
-            headers: {
-              'Authorization': `token ${activeToken}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              message: 'Update site content via Aadya Admin Portal [' + new Date().toLocaleTimeString() + ']',
-              content: base64Content,
-              sha: sha,
-              branch: 'main'
-            })
+
+      for (const target of targetRepos) {
+        const { owner, repo } = target;
+        const baseUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+        async function getFreshSha() {
+          try {
+            const treeRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/main?cb=${Date.now()}_${Math.random()}`, {
+              method: 'GET',
+              headers: { 'Authorization': `token ${activeToken}` }
+            });
+            if (treeRes.ok) {
+              const treeData = await treeRes.json();
+              const item = (treeData.tree || []).find(t => t.path === path);
+              if (item && item.sha) return item.sha;
+            }
+          } catch(e) {}
+
+          const res = await fetch(`${baseUrl}?ref=main&cb=${Date.now()}_${Math.random()}`, {
+            method: 'GET',
+            headers: { 'Authorization': `token ${activeToken}` }
           });
-
-          if (putRes.ok) {
-            const commitData = await putRes.json();
-            return commitData;
+          if (!res.ok) {
+            const errText = await res.text();
+            throw new Error(`Could not fetch metadata from ${owner}/${repo}: ` + errText);
           }
+          const data = await res.json();
+          return data.sha;
+        }
 
-          const errData = await putRes.json().catch(() => ({}));
-          const errMsg = errData.message || ('GitHub error HTTP ' + putRes.status);
-          lastErr = new Error(errMsg);
+        for (let attempt = 0; attempt < 5; attempt++) {
+          try {
+            const sha = await getFreshSha();
+            const putRes = await fetch(baseUrl, {
+              method: 'PUT',
+              headers: {
+                'Authorization': `token ${activeToken}`,
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                message: `Update site content via Aadya Admin Portal [${new Date().toLocaleTimeString()}]`,
+                content: base64Content,
+                sha: sha,
+                branch: 'main'
+              })
+            });
 
-          if (putRes.status === 409 || errMsg.includes('does not match')) {
+            if (putRes.ok) {
+              successCount++;
+              break;
+            }
+
+            const errData = await putRes.json().catch(() => ({}));
+            const errMsg = errData.message || ('GitHub error HTTP ' + putRes.status);
+            lastErr = new Error(errMsg);
+
+            if (putRes.status === 409 || errMsg.includes('does not match')) {
+              await new Promise(r => setTimeout(r, 1000));
+              continue;
+            }
+            break;
+          } catch(err) {
+            lastErr = err;
             await new Promise(r => setTimeout(r, 1000));
-            continue;
           }
-          throw lastErr;
-        } catch(err) {
-          lastErr = err;
-          await new Promise(r => setTimeout(r, 1000));
         }
       }
 
-      throw lastErr || new Error('Failed to commit to GitHub after retries.');
+      if (successCount === 0 && lastErr) {
+        throw lastErr;
+      }
+      return { success: true, count: successCount };
     }
 
     async function publishAllChanges() {
