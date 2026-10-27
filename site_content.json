@@ -658,7 +658,7 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
-      "sort_order": 10
+      "sort_order": 11
     },
     {
       "id": "14",
@@ -871,7 +871,7 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
-      "sort_order": 11
+      "sort_order": 12
     },
     {
       "id": "1792918333524",
@@ -1018,7 +1018,7 @@
       ],
       "hide_badges": false,
       "is_robotics": false,
-      "sort_order": 12
+      "sort_order": 13
     },
     {
       "id": "1792995954131",
@@ -1078,43 +1078,6 @@
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 15
-    },
-    {
-      "id": 1793097589014,
-      "title": "hereh it is",
-      "category_slug": "robotics",
-      "category_name": "Robotics & Coding",
-      "img": "assets/uploads/1793097529598_my-collage__1_.png",
-      "images": [
-        "assets/uploads/1793097529598_my-collage__1_.png"
-      ],
-      "desc": "wjdhwkedhw",
-      "highlights": [],
-      "tags": [
-        "bjhbdcjss"
-      ],
-      "badges": [
-        "FLL",
-        "FTC",
-        "MIT Solve"
-      ],
-      "hide_badges": false,
-      "sections": [
-        {
-          "title": "hehrhe",
-          "intro": "abee ja re",
-          "photos": [
-            {
-              "src": "assets/uploads/1793097565770_pic_41__1_.jpeg",
-              "alt": "pic 41 (1)",
-              "caption": "pic 41 (1)"
-            }
-          ]
-        }
-      ],
-      "videos": [],
-      "badge_position": "right",
-      "sort_order": 17
     }
   ],
   "documents": [
