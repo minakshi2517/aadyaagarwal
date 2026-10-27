@@ -18,7 +18,7 @@
   },
   "portfolio": [
     {
-      "id": "101",
+      "id": 101,
       "title": "FIRST Robotics — FLL & FTC",
       "category_slug": "robotics",
       "category_name": "Robotics & Coding",
@@ -77,10 +77,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": true,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
       "category_name": "",
@@ -129,10 +131,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 1
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
       "category_name": "",
@@ -203,10 +207,12 @@
       ],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "center 25%",
+      "modal_img_position": "center 35%",
       "sort_order": 2
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Biochar Water Treatment",
       "category_slug": "environmental",
       "category_name": "",
@@ -277,10 +283,12 @@
       ],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 3
     },
     {
-      "id": "1",
+      "id": 1,
       "title": "Autonomous Ocean pH Buoy",
       "category_slug": "environmental",
       "category_name": "",
@@ -327,10 +335,12 @@
       ],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 4
     },
     {
-      "id": "8",
+      "id": 8,
       "title": "MoniVitals: Equitable Vitals Monitor & App",
       "category_slug": "monivitals",
       "category_name": "MoniVitals",
@@ -380,10 +390,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 5
     },
     {
-      "id": "1792918752665",
+      "id": 1792918752665,
       "title": "Stanford Center for Artificial Intelligence in Medicine & Imaging",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
@@ -417,10 +429,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 6
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "Biomedical & AI Scientific Research",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
@@ -473,10 +487,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 7
     },
     {
-      "id": "11",
+      "id": 11,
       "title": "Mercer County Hunger Relief & Meal Packaging Drives",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -552,10 +568,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 8
     },
     {
-      "id": "13",
+      "id": 13,
       "title": "New Jersey Legislative Commendation & Civic Supply Drives",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -593,10 +611,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 9
     },
     {
-      "id": "1792917988413",
+      "id": 1792917988413,
       "title": "BioResearch Academy - 24 week Advanced Biology course and 3 week wet-lab",
       "category_slug": "biomedical",
       "category_name": "Biomedical Research & AI",
@@ -621,10 +641,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 10
     },
     {
-      "id": "1792994088000",
+      "id": 1792994088000,
       "title": "Leopold Scholars in Ecology and Ethics",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -653,10 +675,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 10
     },
     {
-      "id": "14",
+      "id": 14,
       "title": "Creative & Academic Writing",
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
@@ -866,10 +890,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 11
     },
     {
-      "id": "1792918333524",
+      "id": 1792918333524,
       "title": "Music, Theater & Public Speaking",
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
@@ -1013,10 +1039,12 @@
       ],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 12
     },
     {
-      "id": "1792995954131",
+      "id": 1792995954131,
       "title": "here it is",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -1044,10 +1072,12 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 14
     },
     {
-      "id": "1792997124021",
+      "id": 1792997124021,
       "title": "2nd blank tile",
       "category_slug": "community",
       "category_name": "School & Community",
@@ -1072,12 +1102,14 @@
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
+      "img_position": "",
+      "modal_img_position": "",
       "sort_order": 15
     }
   ],
   "documents": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Autonomous Ocean pH Buoy &amp; Chemical Buffer Dispenser",
       "category_pill": "Climate Tech",
       "eyebrow": "Climate Tech &amp; Automation",
@@ -1094,7 +1126,7 @@
       "sort_order": 0
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Biochar AIoT Device: Water Filtration &amp; Adsorption",
       "category_pill": "Water Research",
       "eyebrow": "Environmental Water Remediation &amp; IoT",
@@ -1111,7 +1143,7 @@
       "sort_order": 1
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "AI for a Better World (MIT Solve Water Node)",
       "category_pill": "Responsible AI",
       "eyebrow": "Responsible AI &amp; Edge Computing",
@@ -1128,7 +1160,7 @@
       "sort_order": 2
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "MoniVitals: Non-Invasive Multispectral Telemetry",
       "category_pill": "HealthTech",
       "eyebrow": "Healthtech &amp; Optical Biometrics",
@@ -1145,7 +1177,7 @@
       "sort_order": 3
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "FIRST Tech Challenge (FTC) Autonomous Pathing Architecture",
       "category_pill": "Robotics",
       "eyebrow": "Autonomous Robotics &amp; Motion Control",
@@ -1162,7 +1194,7 @@
       "sort_order": 4
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "Multimodal Clinical Sepsis &amp; Diagnostic Modeling",
       "category_pill": "Clinical AI",
       "eyebrow": "Clinical Machine Learning",
@@ -1175,7 +1207,7 @@
       "sort_order": 5
     },
     {
-      "id": "7",
+      "id": 7,
       "title": "Cancer Biomarker &amp; Recombinant DNA Assay Protocol",
       "category_pill": "Biomarker Research",
       "eyebrow": "Molecular Biology &amp; Wet-Bench",
@@ -1188,7 +1220,7 @@
       "sort_order": 6
     },
     {
-      "id": "8",
+      "id": 8,
       "title": "John Locke Global Essay: Environmental Governance &amp; Ethics",
       "category_pill": "Humanities",
       "eyebrow": "Humanities &amp; Technological Ethics",
@@ -1203,7 +1235,7 @@
   ],
   "memberships": [
     {
-      "id": "1",
+      "id": 1,
       "org_name": "IEEE (Institute of Electrical and Electronics Engineers)",
       "badge_text": "IEEE",
       "badge_gradient": "linear-gradient(135deg, #1864ab, #228be6)",
@@ -1213,7 +1245,7 @@
       "sort_order": 0
     },
     {
-      "id": "2",
+      "id": 2,
       "org_name": "Water Environment Federation",
       "badge_text": "WEF",
       "badge_gradient": "linear-gradient(135deg, #099268, #20c997)",
@@ -1223,7 +1255,7 @@
       "sort_order": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "org_name": "AWDORG Foundation (Anything Will Do)",
       "badge_text": "AWD",
       "badge_gradient": "linear-gradient(135deg, #e8590c, #f08c00)",
@@ -1233,7 +1265,7 @@
       "sort_order": 0
     },
     {
-      "id": "4",
+      "id": 4,
       "org_name": "STEP For A Better World LEO Club",
       "badge_text": "LEO",
       "badge_gradient": "linear-gradient(135deg, #c2255c, #66a80f)",
@@ -1243,7 +1275,7 @@
       "sort_order": 0
     },
     {
-      "id": "5",
+      "id": 5,
       "org_name": "Biomedical Engineering Society (BMES)",
       "badge_text": "BMES",
       "badge_gradient": "linear-gradient(135deg, #0c8599, #15aabf)",
@@ -1253,7 +1285,7 @@
       "sort_order": 0
     },
     {
-      "id": "6",
+      "id": 6,
       "org_name": "New Jersey Water Environment Association (NJWEA)",
       "badge_text": "NJ",
       "badge_gradient": "linear-gradient(135deg, #0b7285, #1098ad)",
@@ -1263,7 +1295,7 @@
       "sort_order": 0
     },
     {
-      "id": "7",
+      "id": 7,
       "org_name": "NCWIT Aspirations in Computing (AiC) Community",
       "badge_text": "NC",
       "badge_gradient": "linear-gradient(135deg, #5f3dc4, #c2255c)",
@@ -1275,9 +1307,10 @@
   ],
   "awards": [
     {
-      "id": "1",
-      "title": "MIT Solve AI for a Better World Youth Innovation Challenge",
+      "id": 1,
+      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
       "category_pill": "National Winner · 2026",
+      "category_group": "research",
       "year": "2026",
       "image_url": "assets/uploads/1792835583518_pic1.jpeg",
       "video_url": "",
@@ -1290,19 +1323,20 @@
       "id": 2,
       "title": "U.S. Stockholm Junior Water Prize",
       "category_pill": "Regional Award · 2026",
+      "category_group": "research",
       "year": "2026",
       "image_url": "assets/ref_images/projects_msef-water-award.jpg",
       "video_url": "",
-      "description": "Regional Award for wa Verified.ter research and biochar remediation presentation at NJWEA Annual Conference.",
+      "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 1,
-      "category_group": "research"
+      "sort_order": 1
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "NOAA — “Taking the Pulse of the Planet” Award",
       "category_pill": "Recognition · 2026",
+      "category_group": "research",
       "year": "2026",
       "image_url": "assets/nova.jpeg",
       "video_url": "",
@@ -1312,9 +1346,10 @@
       "sort_order": 2
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "Mercer Science & Engineering Fair",
       "category_pill": "Second Place · 2026",
+      "category_group": "research",
       "year": "2026",
       "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
       "video_url": "",
@@ -1324,9 +1359,10 @@
       "sort_order": 3
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "FIRST LEGO League — NJ Regional & State Awards",
       "category_pill": "FIRST LEGO League",
+      "category_group": "robotics",
       "year": "2024",
       "image_url": "assets/robotics/pic 2 - Team award.JPG",
       "video_url": "",
@@ -1336,9 +1372,10 @@
       "sort_order": 4
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
+      "category_group": "robotics",
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
       "video_url": "",
@@ -1348,9 +1385,10 @@
       "sort_order": 5
     },
     {
-      "id": "7",
+      "id": 7,
       "title": "Panther Hackathon Best Beginner Hack",
       "category_pill": "Princeton Day School",
+      "category_group": "robotics",
       "year": "2024",
       "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
       "video_url": "",
@@ -1360,9 +1398,10 @@
       "sort_order": 6
     },
     {
-      "id": "8",
+      "id": 8,
       "title": "New Jersey Legislative Commendation",
       "category_pill": "State Recognition",
+      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
       "video_url": "",
@@ -1372,9 +1411,10 @@
       "sort_order": 7
     },
     {
-      "id": "9",
+      "id": 9,
       "title": "United Nations — Future of Service Award",
       "category_pill": "Youth Service",
+      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/STEP UN Future of Service.jpeg",
       "video_url": "",
@@ -1384,9 +1424,10 @@
       "sort_order": 8
     },
     {
-      "id": "23",
+      "id": 23,
       "title": "The Melvin Jones Fundraiser",
       "category_pill": "Civic Award · Lions Club",
+      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/community/melvin_jones_fundraiser_flyer.jpg",
       "video_url": "",
@@ -1396,9 +1437,10 @@
       "sort_order": 9
     },
     {
-      "id": "17",
+      "id": 17,
       "title": "John H. Imbrie Humanities/English Award",
       "category_pill": "Humanities Program · 2026",
+      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
       "video_url": "",
@@ -1408,9 +1450,10 @@
       "sort_order": 10
     },
     {
-      "id": "10",
+      "id": 10,
       "title": "John Locke International Essay Writing Competition",
       "category_pill": "High Commendation · 2026",
+      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/ref_images/projects_john-locke_framed.jpg",
       "video_url": "",
@@ -1420,9 +1463,10 @@
       "sort_order": 11
     },
     {
-      "id": "11",
+      "id": 11,
       "title": "Harvard International Review (HIR) Summer 2026",
       "category_pill": "Bronze Medal · 2026",
+      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/hir_bronze_medal_official_certificate.jpg",
       "video_url": "",
@@ -1432,9 +1476,10 @@
       "sort_order": 12
     },
     {
-      "id": "12",
+      "id": 12,
       "title": "Scholastic Art & Writing Awards",
       "category_pill": "Silver Keys & Mentions · 2025–2026",
+      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/scholastic_silver_key_card.jpg",
       "video_url": "",
@@ -1444,9 +1489,10 @@
       "sort_order": 13
     },
     {
-      "id": "14",
+      "id": 14,
       "title": "Poetry & Creative Fiction Publications",
       "category_pill": "Literary Anthologies · 2024–2026",
+      "category_group": "writing",
       "year": "2024–2026",
       "image_url": "assets/certificates/poetry_publications_card.jpg",
       "video_url": "",
@@ -1456,9 +1502,10 @@
       "sort_order": 14
     },
     {
-      "id": "15",
+      "id": 15,
       "title": "Veterans of Foreign Wars — Patriot’s Pen",
       "category_pill": "District & Local Winner · VFW",
+      "category_group": "writing",
       "year": "2024",
       "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
       "video_url": "",
@@ -1471,6 +1518,7 @@
       "id": "techtrek-1",
       "title": "AI-Driven Discovery of Solar Fuel Catalysts",
       "category_pill": "TechTrek · Chemistry",
+      "category_group": "writing",
       "year": "2024",
       "image_url": "techtrek/TechTrek Article 1.png",
       "video_url": "",
@@ -1483,6 +1531,7 @@
       "id": "techtrek-2",
       "title": "Beyond Textbooks: Reversing the Central Dogma of Biology",
       "category_pill": "TechTrek · Biology",
+      "category_group": "writing",
       "year": "2024",
       "image_url": "techtrek/TechTrek Article 2.png",
       "video_url": "",
@@ -1492,9 +1541,10 @@
       "sort_order": 17
     },
     {
-      "id": "20",
+      "id": 20,
       "title": "Music-Fest International Rising Talent Grand Prize",
       "category_pill": "Classical Piano",
+      "category_group": "arts",
       "year": "2026",
       "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
       "video_url": "",
@@ -1504,9 +1554,10 @@
       "sort_order": 18
     },
     {
-      "id": "22",
+      "id": 22,
       "title": "North South Foundation National Public Speaking 1st Place",
       "category_pill": "National Champion",
+      "category_group": "arts",
       "year": "2024",
       "image_url": "assets/certificates/nsf_speech_award.png",
       "video_url": "",
@@ -1516,9 +1567,10 @@
       "sort_order": 19
     },
     {
-      "id": "21",
+      "id": 21,
       "title": "NJMTA Flute Honors Recital Award",
       "category_pill": "Honors Recital Winner",
+      "category_group": "arts",
       "year": "2024",
       "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
       "video_url": "",
@@ -1531,6 +1583,7 @@
       "id": "biochar",
       "title": "American Biochar Company",
       "category_pill": "Industry Spotlight",
+      "category_group": "featured",
       "year": "2026",
       "image_url": "assets/american-biochar-card.webp",
       "video_url": "",
@@ -1543,6 +1596,7 @@
       "id": "lawrentian",
       "title": "The Lawrentian — “One 2 Watch”",
       "category_pill": "Magazine Feature",
+      "category_group": "featured",
       "year": "2026",
       "image_url": "assets/The Lawrentian one 2 watch.jpeg",
       "video_url": "",
@@ -1555,6 +1609,7 @@
       "id": "pds",
       "title": "Princeton Day School",
       "category_pill": "School Feature",
+      "category_group": "featured",
       "year": "2023",
       "image_url": "projects/writing/pds-feature-2023.webp",
       "video_url": "",
@@ -1675,14 +1730,5 @@
     ],
     "invite_headline": "Invite Aadya to speak or collaborate",
     "invite_body": "Aadya is glad to speak at student events and panels, mentor young women entering STEM, and collaborate on research in water, responsible AI and equitable health. If her work resonates — or you would like her to share it with your students or team — reach out and she will be happy to arrange a conversation."
-  },
-  "media": [
-    {
-      "id": 1,
-      "filename": "20261023_091817_test_admin_upload.png",
-      "url": "assets/uploads/20261023_091817_test_admin_upload.png",
-      "size_bytes": 0,
-      "uploaded_at": "2026-10-23 03:48:17"
-    }
-  ]
+  }
 }
