@@ -74,16 +74,17 @@
           "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": true,
       "sort_order": 0
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "Project",
-      "img": "projects/mit-day-ai-stage.jpg",
+      "category_name": "",
+      "img": "assets/uploads/1792856574507_pic1.jpeg",
       "images": [
         "assets/uploads/1792856574507_pic1.jpeg",
         "projects/mit-day-ai-stage.jpg",
@@ -118,20 +119,17 @@
       "sections": [
         {
           "title": "The technical pitch",
-          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use.",
-          "photos": []
+          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use."
         },
         {
           "title": "On stage and recognition at MIT Media Lab",
-          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar.",
-          "photos": []
+          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
-      "sort_order": 1,
-      "videos": [],
-      "badge_position": "right"
+      "sort_order": 1
     },
     {
       "id": "4",
@@ -193,6 +191,14 @@
           "title": "Measurements and results",
           "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions.",
           "photos": []
+        }
+      ],
+      "videos": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
+          "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
+          "poster": ""
         }
       ],
       "hide_badges": false,
@@ -261,6 +267,14 @@
           "intro": "Logged repeated measurements and plotted changes in water quality over time to compare treatment conditions."
         }
       ],
+      "videos": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/watch?v=ELyxcPwMp3M",
+          "title": "NJWEA Stockholm Junior Water Prize Special Award acceptance speech",
+          "poster": ""
+        }
+      ],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 3
@@ -301,6 +315,14 @@
           "title": "Autonomous Closed-Loop Marine Dosing",
           "intro": "Submersible sensor node constantly samples coastal water acidity. Upon detecting localized acidification events, calibrated alkaline reagent is released to protect marine calcifiers and restore pH balance.",
           "photos": []
+        }
+      ],
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/3MYSC Submission - Neutralizing Ocean Acidification_ An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems.mp4",
+          "title": "3MYSC Submission - Neutralizing Ocean Acidification: An Autonomous pH-Responsive Buoy to Protect Aquatic Ecosystems",
+          "poster": "projects/ocean-project-presentation.jpg"
         }
       ],
       "hide_badges": false,
@@ -355,6 +377,7 @@
           "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 5
@@ -391,6 +414,7 @@
           "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 6
@@ -446,6 +470,7 @@
           "intro": "July – August 2025 | Mentor: Kristina Kordova, PhD, Biological Sciences, University of Cambridge.<br><br>• Conducted independent research on tumor heterogeneity in cancer biology, with a focus on single-cell RNA sequencing (scRNA-seq) data analysis.<br>• Performed a literature review to identify current challenges and emerging methods in cancer subtyping.<br>• Applied data preprocessing, normalization, dimensionality reduction, and clustering using Python to develop a model for breast cancer subtype classification, identified 32 distinct clusters with biomarkers.<br>• Authored a 6-page research paper detailing methodology, analysis, and biological implications."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 7
@@ -524,6 +549,7 @@
           "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 8
@@ -564,6 +590,7 @@
           "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 9
@@ -591,6 +618,7 @@
           "intro": "Conducted 3 weeks of hands-on physical wet lab work in Boston practicing CRISPR, gel electrophoresis, high-throughput RNA sequencing, and PCR protocols for Alzheimer's disease research. Developed advanced wet-lab technical and experimental skills."
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 10
@@ -622,6 +650,7 @@
         "Ecology & Ethics"
       ],
       "sections": [],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 10
@@ -834,6 +863,7 @@
           ]
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 11
@@ -972,6 +1002,15 @@
           ]
         }
       ],
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/music-performance-preview.mp4",
+          "title": "Flute & Piano Recital Performance",
+          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
+          "is_placeholder": true
+        }
+      ],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 12
@@ -1002,6 +1041,7 @@
           "photos": []
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 14
@@ -1029,6 +1069,7 @@
           "photos": []
         }
       ],
+      "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "sort_order": 15
@@ -1235,35 +1276,36 @@
   "awards": [
     {
       "id": "1",
-      "title": "MIT Solve — AI for a Better World Youth Innovation Challenge",
+      "title": "MIT Solve AI for a Better World Youth Innovation Challenge",
       "category_pill": "National Winner · 2026",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/uploads/1792835583518_pic1.jpeg",
+      "video_url": "",
       "description": "One of five national winners; presented the water-quality project at the MIT Media Lab.",
       "link_text": "Read Feature",
       "link_url": "https://www.lawrenceville.org/life-at-lawrenceville/news-events/news-detail/~board/school-news/post/aadya-agarwal-29-shares-her-journey-from-lawrenceville-to-the-mit-media-lab",
       "sort_order": 0
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "U.S. Stockholm Junior Water Prize",
       "category_pill": "Regional Award · 2026",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/ref_images/projects_msef-water-award.jpg",
-      "description": "Regional Award for water research and biochar remediation presentation at NJWEA Annual Conference.",
+      "video_url": "",
+      "description": "Regional Award for wa Verified.ter research and biochar remediation presentation at NJWEA Annual Conference.",
       "link_text": "",
       "link_url": "",
-      "sort_order": 1
+      "sort_order": 1,
+      "category_group": "research"
     },
     {
       "id": "3",
       "title": "NOAA — “Taking the Pulse of the Planet” Award",
       "category_pill": "Recognition · 2026",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/nova.jpeg",
+      "video_url": "",
       "description": "National Oceanic and Atmospheric Administration recognition.",
       "link_text": "",
       "link_url": "",
@@ -1273,9 +1315,9 @@
       "id": "4",
       "title": "Mercer Science & Engineering Fair",
       "category_pill": "Second Place · 2026",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/science_fairs/Science_Fair_Awards_At_Mercer_County_Science_Fair.jpg",
+      "video_url": "",
       "description": "Second Place, Earth and Environmental Science at the Regeneron ISEF-affiliated regional fair.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1285,9 +1327,9 @@
       "id": "6",
       "title": "FIRST LEGO League — NJ Regional & State Awards",
       "category_pill": "FIRST LEGO League",
-      "category_group": "robotics",
       "year": "2024",
       "image_url": "assets/robotics/pic 2 - Team award.JPG",
+      "video_url": "",
       "description": "1st Place Robot Design Award at NJ Regionals (2023–2024 and 2022–2023); Breakthrough Award at NJ State Championship (2023–2024).",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1297,9 +1339,9 @@
       "id": "5",
       "title": "WPI US Open World Championship",
       "category_pill": "World Finalist · 2026",
-      "category_group": "robotics",
       "year": "2026",
       "image_url": "assets/robotics/pic 10 - wpi award.jpg",
+      "video_url": "",
       "description": "Ranked #14 out of 108 international robotics teams; Lead Autonomous Programmer and Robot Design Award Finalist at Worcester Polytechnic Institute.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1309,9 +1351,9 @@
       "id": "7",
       "title": "Panther Hackathon Best Beginner Hack",
       "category_pill": "Princeton Day School",
-      "category_group": "robotics",
       "year": "2024",
       "image_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
+      "video_url": "",
       "description": "Recognized for a beginner-level hackathon project demonstrating algorithmic problem-solving and rapid prototyping at the Princeton Day School Panther Hackathon.",
       "link_text": "View Hackathon Project",
       "link_url": "assets/robotics/hackathon-best-beginner-hack.jpeg",
@@ -1321,9 +1363,9 @@
       "id": "8",
       "title": "New Jersey Legislative Commendation",
       "category_pill": "State Recognition",
-      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/Service Award - NJ State Assembly.jpeg",
+      "video_url": "",
       "description": "Official commendation from the New Jersey State Assembly and State Senate recognizing leadership in mobilizing youth for grassroots community hunger relief.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1333,9 +1375,9 @@
       "id": "9",
       "title": "United Nations — Future of Service Award",
       "category_pill": "Youth Service",
-      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/certificates/STEP UN Future of Service.jpeg",
+      "video_url": "",
       "description": "United Nations STEP recognition for youth-led service, hunger relief supply mobilization, and community impact.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1345,9 +1387,9 @@
       "id": "23",
       "title": "The Melvin Jones Fundraiser",
       "category_pill": "Civic Award · Lions Club",
-      "category_group": "civic",
       "year": "2024",
       "image_url": "assets/community/melvin_jones_fundraiser_flyer.jpg",
+      "video_url": "",
       "description": "Fundraising for The Melvin Jones Fellowship supporting Lions Club International across vision, diabetes, environment, childhood cancer, and hunger relief.",
       "link_text": "",
       "link_url": "",
@@ -1357,9 +1399,9 @@
       "id": "17",
       "title": "John H. Imbrie Humanities/English Award",
       "category_pill": "Humanities Program · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/Receiving THE JOHN H IMBRIE HUMANITIES AWARD.jpg",
+      "video_url": "",
       "description": "Selected from 150 ninth-grade students for demonstrated excellence in English study within the Humanities program at The Lawrenceville School.",
       "link_text": "",
       "link_url": "",
@@ -1369,9 +1411,9 @@
       "id": "10",
       "title": "John Locke International Essay Writing Competition",
       "category_pill": "High Commendation · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/ref_images/projects_john-locke_framed.jpg",
+      "video_url": "",
       "description": "High Commendation in Science & Technology from over 19,000 international entries across 138 nations in the global essay competition.",
       "link_text": "",
       "link_url": "",
@@ -1381,9 +1423,9 @@
       "id": "11",
       "title": "Harvard International Review (HIR) Summer 2026",
       "category_pill": "Bronze Medal · 2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/hir_bronze_medal_official_certificate.jpg",
+      "video_url": "",
       "description": "Bronze Medal in the Harvard International Review Academic Writing Competition under the Technology & Innovation theme.",
       "link_text": "View Certificate",
       "link_url": "assets/certificates/hir_bronze_medal_official_certificate.jpg",
@@ -1393,9 +1435,9 @@
       "id": "12",
       "title": "Scholastic Art & Writing Awards",
       "category_pill": "Silver Keys & Mentions · 2025–2026",
-      "category_group": "writing",
       "year": "2026",
       "image_url": "assets/certificates/scholastic_silver_key_card.jpg",
+      "video_url": "",
       "description": "Two Silver Keys in Poetry and four Honorable Mentions in Personal Essay & Memoir in the nation’s longest-running student recognition program.",
       "link_text": "",
       "link_url": "",
@@ -1405,9 +1447,9 @@
       "id": "14",
       "title": "Poetry & Creative Fiction Publications",
       "category_pill": "Literary Anthologies · 2024–2026",
-      "category_group": "writing",
       "year": "2024–2026",
       "image_url": "assets/certificates/poetry_publications_card.jpg",
+      "video_url": "",
       "description": "Featured in youth anthologies including Poetic Power, The Telling Room, Skipping Stones, and When the Sink Speaks in The Rev (Top 10 of 150 entries).",
       "link_text": "",
       "link_url": "",
@@ -1417,9 +1459,9 @@
       "id": "15",
       "title": "Veterans of Foreign Wars — Patriot’s Pen",
       "category_pill": "District & Local Winner · VFW",
-      "category_group": "writing",
       "year": "2024",
       "image_url": "assets/certificates/vfw_patriots_pen_official_certificate.jpg",
+      "video_url": "",
       "description": "Placed 2nd locally and 3rd at the district level in Patriot’s Pen, the nationwide youth essay contest held by the Veterans of Foreign Wars.",
       "link_text": "",
       "link_url": "",
@@ -1429,9 +1471,9 @@
       "id": "techtrek-1",
       "title": "AI-Driven Discovery of Solar Fuel Catalysts",
       "category_pill": "TechTrek · Chemistry",
-      "category_group": "writing",
       "year": "2024",
       "image_url": "techtrek/TechTrek Article 1.png",
+      "video_url": "",
       "description": "Science article published by TechTrek USA exploring machine learning acceleration in clean energy materials discovery.",
       "link_text": "Read on TechTrek",
       "link_url": "https://www.techtrekusa.com/post/ai-driven-discovery-of-solar-fuel-catalysts-the-future-of-clean-energy",
@@ -1441,9 +1483,9 @@
       "id": "techtrek-2",
       "title": "Beyond Textbooks: Reversing the Central Dogma of Biology",
       "category_pill": "TechTrek · Biology",
-      "category_group": "writing",
       "year": "2024",
       "image_url": "techtrek/TechTrek Article 2.png",
+      "video_url": "",
       "description": "Science article published by TechTrek USA examining non-canonical translation and molecular biology paradigms.",
       "link_text": "Read on TechTrek",
       "link_url": "https://www.techtrekusa.com/post/beyond-textbooks-reversing-the-central-dogma-of-biology",
@@ -1453,9 +1495,9 @@
       "id": "20",
       "title": "Music-Fest International Rising Talent Grand Prize",
       "category_pill": "Classical Piano",
-      "category_group": "arts",
       "year": "2026",
       "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
+      "video_url": "",
       "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1465,9 +1507,9 @@
       "id": "22",
       "title": "North South Foundation National Public Speaking 1st Place",
       "category_pill": "National Champion",
-      "category_group": "arts",
       "year": "2024",
       "image_url": "assets/certificates/nsf_speech_award.png",
+      "video_url": "",
       "description": "First Place National Champion in public speaking and oratorical debate, demonstrating communication and advocacy excellence.",
       "link_text": "Learn More",
       "link_url": "#",
@@ -1477,9 +1519,9 @@
       "id": "21",
       "title": "NJMTA Flute Honors Recital Award",
       "category_pill": "Honors Recital Winner",
-      "category_group": "arts",
       "year": "2024",
       "image_url": "assets/certificates/NJMTA Flute Honors Recital.jpeg",
+      "video_url": "",
       "description": "Selected as NJMTA Flute Honors Recital award winner; serving as 1st Chair Flutist in competitive school and regional wind ensembles.",
       "link_text": "View Flute Honors Certificate",
       "link_url": "assets/certificates/NJMTA%20Flute%20Honors%20Recital.jpeg",
@@ -1489,9 +1531,9 @@
       "id": "biochar",
       "title": "American Biochar Company",
       "category_pill": "Industry Spotlight",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/american-biochar-card.webp",
+      "video_url": "",
       "description": "Young Researcher Spotlight feature covering biochar filtration research, PFAS remediation, and environmental innovation.",
       "link_text": "Read the feature",
       "link_url": "https://ambiochar.com/what-are-your-desired-outcomes/",
@@ -1501,9 +1543,9 @@
       "id": "lawrentian",
       "title": "The Lawrentian — “One 2 Watch”",
       "category_pill": "Magazine Feature",
-      "category_group": "research",
       "year": "2026",
       "image_url": "assets/The Lawrentian one 2 watch.jpeg",
+      "video_url": "",
       "description": "Quarterly school magazine profile following Aadya’s water research and youth-led environmental initiatives.",
       "link_text": "Read the feature",
       "link_url": "https://thelawrentian.lawrenceville.org/issues/summer-2026/inside-the-gates/#one-watch",
@@ -1513,9 +1555,9 @@
       "id": "pds",
       "title": "Princeton Day School",
       "category_pill": "School Feature",
-      "category_group": "writing",
       "year": "2023",
       "image_url": "projects/writing/pds-feature-2023.webp",
+      "video_url": "",
       "description": "Featured during middle school celebrating creative writing, poetry honors, and scholastic achievements.",
       "link_text": "Read the feature",
       "link_url": "https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/",
