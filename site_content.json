@@ -1496,19 +1496,6 @@
       "sort_order": 17
     },
     {
-      "id": 20,
-      "title": "Music-Fest International Rising Talent Grand Prize",
-      "category_pill": "Classical Piano",
-      "year": "2026",
-      "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
-      "video_url": "",
-      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
-      "link_text": "",
-      "link_url": "",
-      "sort_order": 18,
-      "category_group": "research"
-    },
-    {
       "id": "22",
       "title": "North South Foundation National Public Speaking 1st Place",
       "category_pill": "National Champion",
@@ -1567,19 +1554,6 @@
       "link_text": "Read the feature",
       "link_url": "https://www.facebook.com/princetondayschool/posts/congratulations-to-aadya-agarwal-29-whose-creative-endeavors-have-been-recognize/829290559205815/",
       "sort_order": 23
-    },
-    {
-      "id": 20,
-      "title": "Music-Fest International Rising Talent Grand Prize",
-      "category_pill": "Classical Piano",
-      "category_group": "research",
-      "year": "2026",
-      "image_url": "assets/uploads/1792912024284_Copy_of_piano_award.png",
-      "video_url": "",
-      "description": "Grand Prize winner with solo classical piano recital performance at Greenfield Hall, Manhattan School of Music, New York.",
-      "link_text": "",
-      "link_url": "",
-      "sort_order": 18
     }
   ],
   "about": {
