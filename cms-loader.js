@@ -98,6 +98,15 @@
       try {
         const parsed = JSON.parse(local);
         if (parsed && (parsed.settings || parsed.portfolio || parsed.awards)) {
+          if (Array.isArray(parsed.awards)) {
+            parsed.awards.forEach(a => {
+              const sId = String(a.id).toLowerCase();
+              const t = (a.title || '').toLowerCase();
+              if (sId === 'biochar' || sId === 'lawrentian' || sId === 'pds' || t.includes('biochar') || t.includes('lawrentian') || (t.includes('princeton day') && !t.includes('hackathon'))) {
+                a.category_group = 'featured';
+              }
+            });
+          }
           return parsed;
         }
       } catch(e) {}
@@ -476,7 +485,14 @@
       function getNormalizedAwardGroup(aw) {
         const sId = String(aw.id).toLowerCase();
         const raw = (aw.category_group || '').toLowerCase().trim();
-        if (raw === 'featured' || sId === 'biochar' || sId === 'lawrentian' || sId === 'pds') return 'featured';
+        const t = (aw.title || '').toLowerCase().trim();
+        if (
+          raw === 'featured' ||
+          sId === 'biochar' || sId === 'lawrentian' || sId === 'pds' ||
+          t.includes('biochar company') ||
+          t.includes('lawrentian') ||
+          (t.includes('princeton day') && !t.includes('hackathon'))
+        ) return 'featured';
         if (raw === 'research') return 'research';
         if (raw === 'robotics') return 'robotics';
         if (raw === 'civic') return 'civic';
@@ -525,7 +541,13 @@
 
         sortedAwards.forEach(aw => {
           const sId = String(aw.id).toLowerCase();
-          if (sId === 'biochar' || sId === 'lawrentian' || sId === 'pds') {
+          const t = (aw.title || '').toLowerCase().trim();
+          if (
+            sId === 'biochar' || sId === 'lawrentian' || sId === 'pds' ||
+            t.includes('biochar company') ||
+            t.includes('lawrentian') ||
+            (t.includes('princeton day') && !t.includes('hackathon'))
+          ) {
             aw.category_group = 'featured';
           }
           const grp = getNormalizedAwardGroup(aw);
@@ -541,6 +563,7 @@
           const groupAwards = categorized[grpKey];
 
           groupAwards.forEach(aw => {
+            if (getNormalizedAwardGroup(aw) === 'featured') return;
             const sId = String(aw.id);
             const isTechTrek = (sId === 'techtrek-1' || sId === 'techtrek-2' || (aw.title && aw.title.toLowerCase().includes('techtrek')));
             const targetContainer = (isTechTrek && techtrekGrid) ? techtrekGrid : grid;
@@ -564,6 +587,14 @@
 
             targetContainer.appendChild(card);
           });
+        });
+
+        // Double-check removal of any stray featured cards that might have gotten into research or writing
+        document.querySelectorAll('#research-awards .award-visual-card, #writing-awards .award-visual-card').forEach(c => {
+          const t = (c.querySelector('h3')?.textContent || '').toLowerCase();
+          if (t.includes('biochar company') || t.includes('lawrentian') || (t.includes('princeton day') && !t.includes('hackathon'))) {
+            c.remove();
+          }
         });
 
         // Sync Section 06: Featured in (Industry Website . School Magazine)
