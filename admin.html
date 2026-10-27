@@ -1897,7 +1897,7 @@
         } catch(err2) {}
       }
 
-      // 2. Upload to local Python backend if available
+      // 2. Upload to local Python backend or Hostinger PHP backend if available
       try {
         const isLocalHost = (window.location.port === '8000' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || API_BASE);
         if (isLocalHost) {
@@ -1905,6 +1905,12 @@
           fetch(`${apiBase}/api/upload`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${AUTH_TOKEN}` },
+            body: JSON.stringify({ base64: rawB64, filename })
+          }).catch(() => {});
+        } else {
+          fetch('api.php?action=upload_asset', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ base64: rawB64, filename })
           }).catch(() => {});
         }
@@ -1951,14 +1957,33 @@
         window.dispatchEvent(new CustomEvent('cms:data_updated', { detail: siteData }));
       } catch (err) {}
 
-      showToast(`Saving ${label} globally to GitHub & Vercel...`);
+      let hostSaved = false;
+      // 1. If running on Hostinger (PHP available), save directly to server file
+      try {
+        const phpRes = await fetch('api.php?action=save_content', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(siteData)
+        });
+        if (phpRes.ok) {
+          hostSaved = true;
+          showToast(`✓ ${label} saved directly to server!`);
+        }
+      } catch(e) {}
+
+      // 2. Also publish to GitHub as cloud backup
+      showToast(`Saving ${label}...`);
       try {
         const token = localStorage.getItem('aadya_github_token') || DEFAULT_GH_TOKEN;
         await publishToGitHub(token);
-        showToast(`✓ ${label} live globally on all devices!`);
+        showToast(`✓ ${label} live globally!`);
       } catch (err) {
-        console.error('Global publish error:', err);
-        alert(`Cloud Sync Note: ${err.message}\n\nSaved locally on this device. Click "Publish to Live Site" at top right to retry anytime.`);
+        console.warn('GitHub backup sync note:', err);
+        if (hostSaved) {
+          showToast(`✓ ${label} saved directly on server!`);
+        } else {
+          showToast(`✓ Saved locally on this device!`);
+        }
       }
     }
 
