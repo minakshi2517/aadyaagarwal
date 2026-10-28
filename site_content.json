@@ -903,7 +903,7 @@
       "images": [
         "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
       ],
-      "desc": "editted",
+      "desc": "A flutist and pianist with seven years of performance experience, I play flute in the school band and have earned NJMTA Honors ratings on both instruments, performing at venues including Rutgers and the Manhattan School of Music. On stage, I’ve acted, designed sets, and stage-managed a full musical, and trained in theater programs at McCarter Theater in Princeton. As a speaker, I represented my class in Lawrenceville’s school-wide Public Speaking Contest and won Toastmasters’ Outstanding Communicator Award. Whether I’m playing a solo, delivering a line, or giving a speech, I love the craft of connecting with an audience.",
       "highlights": [],
       "tags": [],
       "badges": [],
@@ -1033,15 +1033,15 @@
           "type": "local",
           "src": "projects/videos/music-performance-preview.mp4",
           "title": "Flute & Piano Recital Performance",
-          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
-          "is_placeholder": true
+          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
         }
       ],
       "hide_badges": false,
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 12
+      "sort_order": 12,
+      "badge_position": "right"
     },
     {
       "id": 1792995954131,
