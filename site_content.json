@@ -405,8 +405,7 @@
       "category_name": "Biomedical Research & AI",
       "img": "assets/uploads/1792918739033_bio.jpeg",
       "images": [
-        "assets/uploads/1792918739033_bio.jpeg",
-        "https://aimi.stanford.edu/academic-year-research-internship"
+        "assets/uploads/1792918739033_bio.jpeg"
       ],
       "desc": "Stanford Artificial Intelligence in Medicine & Imaging  - 30-week Academic-Year Internship \n\nWorking on a Machine Learning and AI Project, “User-Centric AI for Assisting the Visually Impaired,” a project integrating neuroimaging and AI. Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis. Developing an understanding of accessibility, model validation, and user-centered design in health technology. Presented the project to The Lawrenceville School’s Board of Trustees on October 23, 2026.",
       "highlights": [
@@ -419,15 +418,18 @@
       "sections": [
         {
           "title": "Stanford AIMI 30-Week Research Internship",
-          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI."
+          "intro": "Selected for a highly competitive 30-week clinical AI research internship at the Stanford Center for Artificial Intelligence in Medicine & Imaging (acceptance rate under 5%). Working on User-Centric AI for Assisting the Visually Impaired integrating neuroimaging and AI.",
+          "photos": []
         },
         {
           "title": "Machine Learning & Computer Vision Modeling",
-          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis."
+          "intro": "Studied and applied machine-learning methods—including convolutional neural networks (CNNs), recurrent neural networks (RNNs), Random Forest, and XGBoost—alongside data cleaning, class-imbalance handling, predictive modeling, and statistical analysis.",
+          "photos": []
         },
         {
           "title": "Accessibility & Board of Trustees Presentation",
-          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology."
+          "intro": "Presented the project to The Lawrenceville School Board of Trustees on October 23, 2026, highlighting accessibility, model validation, and user-centered design in assistive health technology.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -435,7 +437,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 6
+      "sort_order": 6,
+      "badge_position": "right"
     },
     {
       "id": 5,
