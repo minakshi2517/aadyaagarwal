@@ -142,8 +142,8 @@
       "id": 4,
       "title": "IEEE/ISEC — Comparative Biochar Water Analysis",
       "category_slug": "environmental",
-      "category_name": "",
-      "img": "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
+      "category_name": "Project",
+      "img": "assets/uploads/1792856840122_ieee-attendance.jpg",
       "images": [
         "assets/uploads/1792979034626_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
         "assets/uploads/1792975178236_WhatsApp_Image_2026-10-24_at_3.09.20_AM_1_-_Copy.jpeg",
@@ -212,7 +212,8 @@
       "is_robotics": false,
       "img_position": "center 25%",
       "modal_img_position": "center 35%",
-      "sort_order": 2
+      "sort_order": 2,
+      "badge_position": "right"
     },
     {
       "id": 2,
