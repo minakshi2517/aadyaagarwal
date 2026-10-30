@@ -85,8 +85,8 @@
       "id": 3,
       "title": "MIT Solve — AI for a Better World",
       "category_slug": "environmental",
-      "category_name": "",
-      "img": "assets/uploads/1792856574507_pic1.jpeg",
+      "category_name": "Project",
+      "img": "projects/mit-day-ai-stage.jpg",
       "images": [
         "assets/uploads/1792856574507_pic1.jpeg",
         "projects/mit-day-ai-stage.jpg",
@@ -121,11 +121,13 @@
       "sections": [
         {
           "title": "The technical pitch",
-          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use."
+          "intro": "The proposed IoT node would pair water-quality sensors with AI-assisted treatment decisions. River, lake and global measurements inform the model plan; human review, fixed safety limits and decision logs govern its use.",
+          "photos": []
         },
         {
           "title": "On stage and recognition at MIT Media Lab",
-          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar."
+          "intro": "Presented the water-remediation concept at the MIT Media Lab and received recognition as an AI for a Better World winner and Leopold Scholar.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -133,7 +135,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 1
+      "sort_order": 1,
+      "badge_position": "right"
     },
     {
       "id": 4,
