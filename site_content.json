@@ -1100,7 +1100,7 @@
     },
     {
       "id": 1792997124021,
-      "title": "2nd blank tile",
+      "title": "Bridging Generations: Bringing joy, connection, and companionship to senior residents",
       "category_slug": "community",
       "category_name": "School & Community",
       "img": "assets/uploads/1793007676841_pic_7_-_SC.jpg",
@@ -1108,16 +1108,34 @@
         "assets/uploads/1793007676841_pic_7_-_SC.jpg",
         "assets/uploads/1792997085606_20260710_121848.jpg"
       ],
-      "desc": "project description",
+      "desc": "Volunteer at a local senior living center, creating thoughtful activities that bring residents joy and connection.",
       "highlights": [
-        "key highliths"
+        "Companionship visits with residents, sharing conversation, treats, and afternoon snacks",
+        "Designed and delivered handmade holiday and seasonal cards so residents feel remembered",
+        "Created patriotic cards and flags and helped decorate for the Fourth of July",
+        "Performed a flute recital for residents"
       ],
       "tags": [],
       "badges": [],
       "sections": [
         {
-          "title": "Project Overview & Methodology",
-          "intro": "project description",
+          "title": "Companionship Visits",
+          "intro": "Visit residents to deliver handmade cards and baked treats, help serve snacks, and spend time listening to their stories and experiences.",
+          "photos": []
+        },
+        {
+          "title": "Handmade Cards & Celebrations",
+          "intro": "Design personalized cards for holidays and seasonal celebrations, and created festive cards, flags, and decorations for the Fourth of July.",
+          "photos": []
+        },
+        {
+          "title": "Music for Residents",
+          "intro": "Performed a flute recital for residents, bringing a relaxing and joyful moment to their day.",
+          "photos": []
+        },
+        {
+          "title": "What I’ve Learned",
+          "intro": "Inspired by the age-old idea that young and old have much to learn from each other, a philosophy my family has long lived by. Small gestures and time spent together build deeper bonds than any material gift. Listening to residents’ stories has made me more patient, a more attentive listener, and more appreciative of different perspectives.",
           "photos": []
         }
       ],
@@ -1126,7 +1144,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 15
+      "sort_order": 15,
+      "badge_position": "right"
     }
   ],
   "documents": [
