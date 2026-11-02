@@ -596,20 +596,21 @@
     },
     {
       "id": 13,
-      "title": "New Jersey Legislative Commendation & Civic Supply Drives",
+      "title": "New Jersey Legislative Commendation for Community Service",
       "category_slug": "community",
       "category_name": "School & Community",
       "img": "assets/uploads/1792840583839_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg",
       "images": [
         "assets/uploads/1792840583839_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg",
-        "assets/community/Sock Drive - NJ Assembly Woman House.png"
+        "assets/community/Sock Drive - NJ Assembly Woman House.png",
+        "assets/uploads/1793650737548_pic_11_-_diaper_drive.jpg"
       ],
-      "desc": "Organized regional winter clothing and essential supply drives for unhoused families, receiving official commendation from the New Jersey State Assembly and State Senate.",
+      "desc": "Contributed to a diaper and sock drive for individuals in need in collaboration with a New Jersey Assemblywoman, an effort recognized with a citation from the New Jersey General Assembly.",
       "highlights": [
-        "Collected and distributed over 1,200 pairs of thermal socks and winter essentials",
-        "Coordinated drop-off hubs at local schools, libraries, and community centers",
-        "Formal legislative resolution presented by NJ State Assemblywoman",
-        "Demonstrated sustainable youth civic engagement model"
+        "Contributed to a diaper and sock drive for individuals in need, focusing on items shelters need most but rarely receive",
+        "Collaborated with a New Jersey Assemblywoman’s office on the drive",
+        "Experienced firsthand how student volunteers can partner with local leaders to meet community needs",
+        "Received a New Jersey General Assembly Citation and Commendation for Community Service and Action"
       ],
       "tags": [
         "#CivicImpact",
@@ -623,11 +624,13 @@
       "sections": [
         {
           "title": "Regional Winter Drive Logistics",
-          "intro": "Established secure donation collection bins across Mercer County schools and public libraries, coordinating weekly sorting, sanitization, and packaging."
+          "intro": "Established secure donation collection bins across Mercer County schools and public libraries, coordinating weekly sorting, sanitization, and packaging.",
+          "photos": []
         },
         {
           "title": "Bipartisan Legislative Commendation",
-          "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families."
+          "intro": "Formally commended on the floor of the New Jersey State Legislature for dedicated grassroots leadership in service of vulnerable families.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -635,7 +638,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 9
+      "sort_order": 9,
+      "badge_position": "right"
     },
     {
       "id": 1792917988413,
