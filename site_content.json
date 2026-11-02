@@ -360,11 +360,7 @@
       ],
       "desc": "Hosted a community health booth at the local farmers’ market, offering free vitals checks, raising awareness of preventive care and regular health monitoring, and gathering user feedback to refine my MoniVitals app.",
       "highlights": [
-        "Phone-connected, non-invasive vital screening platform developed for accessible and equitable community health",
-        "Measures six vital markers in under a minute, including blood oxygen (SpO2), pulse rate, body temperature, and estimated blood pressure",
-        "Private real-time readings transmitted securely to each visitor&#x27;s smartphone",
-        "Python data telemetry backend integrated with edge ESP32 microcontroller, MAX30102 PPG sensor, and MLX90614 infrared optical thermopile",
-        "Conducted over 100 free vital screenings across local New Jersey farmers markets, community centers, and senior living facilities"
+        "A privacy-preserving app that turns any consumer smartphone into a vitals monitor that works for all skin tones. Using their palm, which has less melanin, users get cardiac & respiratory vitals, ready to share with family or a care team."
       ],
       "tags": [
         "#MoniVitals",
@@ -380,15 +376,18 @@
       "sections": [
         {
           "title": "Community Field Screening & Senior Care Deployment",
-          "intro": "Deployed MoniVitals across local New Jersey farmers markets and senior outreach events, conducting over 100 free vital screenings for community elders and underserved families. Optimized font sizing, high-contrast visual indicators, and voice-assisted telemetry readings for senior accessibility."
+          "intro": "The app can display heart rate, respiratory rate, heart rate variability (HRV) in just 60 seconds. First, the user rests a fingertip over the rear camera and flash to capture a direct-contact baseline pulse. Then, they hold up their open palm and record it from a short distance. By utilizing the rich capillary network of the palm, which is flatter and with no shadows, the app bypasses the bias found in traditional remote-PPG apps, ensuring a clean, truly accurate signal for every user, no matter their race, age, or gender.\n\nWith every heartbeat, blood flowing through the capillaries causes tiny color changes, or micro-blushes, that any smartphone camera can capture. MoniVitals decodes these contact and remote signals into a live pulse waveform, shows a signal-quality meter so the user knows the reading is usable, and then calculates their vitals.\n\nEvery reading saves to a private dashboard, so users can follow patterns through the day instead of relying on a single number. Reminders help users check the vitals at the times that matter the most, like morning blood-pressure spikes that otherwise require costly ambulatory monitoring, which can cost up to $250 for a single check. Users can export a summary before an appointment, so they arrive with real data. For the 15–30% of people with white coat syndrome, whose vitals may rise artificially during a doctor's office visit, at-home readings give a truer picture.\n\nThe models run on the device so no health data leaves the phone unless the user exports it. MoniVitals is built for people who can't afford home monitors, older adults, caregivers, and anyone who wants to catch changes early.\n\nMoniVitals is a wellness screening tool, not a medical diagnosis.",
+          "photos": []
         },
         {
           "title": "Hardware Prototype, Custom Enclosure & ESP32 Microcontroller",
-          "intro": "Engineered custom 3D printed housing in Fusion 360 with ergonomic fingertip alignment and optical light baffling. Integrated MAX30102 optical sensor and MLX90614 thermopile over I2C multiplexed bus with low-power sleep state management."
+          "intro": "Engineered custom 3D printed housing in Fusion 360 with ergonomic fingertip alignment and optical light baffling. Integrated MAX30102 optical sensor and MLX90614 thermopile over I2C multiplexed bus with low-power sleep state management.",
+          "photos": []
         },
         {
           "title": "Pulse Oximetry Optical Bias Mitigation Research",
-          "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves."
+          "intro": "Investigated wavelength absorption differentials across varying epidermal melanin concentrations in PPG sensors to eliminate systemic bias in non-invasive biometric monitoring, evaluating multi-wavelength calibration curves.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -396,7 +395,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 5
+      "sort_order": 5,
+      "badge_position": "right"
     },
     {
       "id": 1792918752665,
