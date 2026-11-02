@@ -500,7 +500,7 @@
     },
     {
       "id": 11,
-      "title": "Mercer County Hunger Relief & Meal Packaging Drives",
+      "title": "Fighting Hunger & Serving Community",
       "category_slug": "community",
       "category_name": "School & Community",
       "img": "assets/uploads/1792858843608_222_aadya.png",
@@ -546,12 +546,14 @@
         "assets/uploads/1792790871447_Sock_Drive_-_NJ_Assembly_Woman_House.png",
         "assets/uploads/1792858241280_aadya_here_22.jpeg"
       ],
-      "desc": "Spearheaded grassroots community drives, packing over 3,500 lbs of shelf-stable food and mobilizing youth volunteers across Mercer County food pantries.",
+      "desc": "Helped pack more than 150,000 meals for hunger relief and supported community collection drives as a member of the STEP For A Better World Leo Club, a student-led nonprofit sponsored by the West Windsor Lions Club and affiliated with Lions Clubs International",
       "highlights": [
-        "Mobilized 150+ youth and student volunteers for regional meal packaging",
-        "Coordinated logistics with Mercer County food banks and community shelters",
-        "Organized annual holiday candy and non-perishable drives for local children",
-        "Direct community leadership recognized by local and state representatives"
+        "Helped pack 150,624 meals for Project Hunger and fundraised to provide 300 additional meals",
+        "Led a Halloween candy drive that collected 131 bags of candy for Howard’s Healthy Choices and Anchor House, which serve underprivileged and vulnerable youth in Trenton, NJ",
+        "Supported collection drives for toys, books, shoes, socks, eyeglasses, and diapers for the Rescue Mission of Trenton, Toys for Tots, and Rahbar Trust",
+        "Raised $1,000 for the Melvin Jones Fellowship Fund, supporting vision, diabetes, pediatric cancer, environmental, and hunger causes",
+        "Recognized with a New Jersey General Assembly Citation for Community Service (15th Legislative District)",
+        "Selected to attend the Lions Day with the United Nations, The Future of Service, in New York City"
       ],
       "tags": [
         "#HungerRelief",
@@ -565,11 +567,13 @@
       "sections": [
         {
           "title": "Grassroots Logistics & Youth Mobilization",
-          "intro": "Organized supply collection points across regional schools, managed volunteer shift scheduling, and ensured safe handling and direct delivery of nutritional meals to local food pantries."
+          "intro": "Organized supply collection points across regional schools, managed volunteer shift scheduling, and ensured safe handling and direct delivery of nutritional meals to local food pantries.",
+          "photos": []
         },
         {
           "title": "Annual Holiday Candy & Nutritional Support",
-          "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs."
+          "intro": "Created festive care packages and donation boxes distributed through community shelters and underserved youth programs.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -577,7 +581,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 8
+      "sort_order": 8,
+      "badge_position": "right"
     },
     {
       "id": 13,
