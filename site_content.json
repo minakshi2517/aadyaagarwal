@@ -701,7 +701,7 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 10
+      "sort_order": 11
     },
     {
       "id": 14,
@@ -916,7 +916,7 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 11
+      "sort_order": 12
     },
     {
       "id": 1792918333524,
@@ -1064,41 +1064,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 12,
+      "sort_order": 13,
       "badge_position": "right"
-    },
-    {
-      "id": 1792995954131,
-      "title": "here it is",
-      "category_slug": "community",
-      "category_name": "School & Community",
-      "img": "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
-      "images": [
-        "assets/uploads/1792997037025_WhatsApp_Image_2026-10-26_at_11.21.07_AM.jpeg",
-        "assets/uploads/1792995905368_pic_6_-_Sock_Drive_-_AssemblyWoman-NJ_State_Senate_House_-_photo2.jpg"
-      ],
-      "desc": "its sub heading ,project description",
-      "highlights": [
-        "Mobilized youth and student volunteers for regional meal packaging",
-        "Coordinated logistics with Mercer County food banks and community shelters",
-        "Organized annual holiday candy and non-perishable drives for local children",
-        "Direct community leadership recognized by local and state representatives"
-      ],
-      "tags": [],
-      "badges": [],
-      "sections": [
-        {
-          "title": "explore the work section 1",
-          "intro": "lil description",
-          "photos": []
-        }
-      ],
-      "videos": [],
-      "hide_badges": false,
-      "is_robotics": false,
-      "img_position": "",
-      "modal_img_position": "",
-      "sort_order": 14
     },
     {
       "id": 1792997124021,
@@ -1164,7 +1131,7 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 15,
+      "sort_order": 14,
       "badge_position": "right"
     }
   ],
