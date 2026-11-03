@@ -924,7 +924,9 @@
       "category_slug": "writing",
       "category_name": "Writing & Performing Arts",
       "img": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png",
-      "images": [],
+      "images": [
+        "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
+      ],
       "desc": "A flutist and pianist with seven years of performance experience, I play flute in the school band and have earned NJMTA Honors ratings on both instruments, performing at venues including Rutgers and the Manhattan School of Music. On stage, I’ve acted, designed sets, and stage-managed a full musical, and trained in theater programs at McCarter Theater in Princeton. As a speaker, I represented my class in Lawrenceville’s school-wide Public Speaking Contest and won Toastmasters’ Outstanding Communicator Award. Whether I’m playing a solo, delivering a line, or giving a speech, I love the craft of connecting with an audience.",
       "highlights": [],
       "tags": [],
@@ -1029,8 +1031,8 @@
           ]
         },
         {
-          "title": "Public Speaking, Forensics & Speech Honors",
-          "intro": "Trained in competitive forensics, Toastmasters communication, and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity.",
+          "title": "Public Speaking",
+          "intro": "Trained in Toastmasters communication, and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity.",
           "photos": [
             {
               "src": "assets/speaking/speech_award_ceremony.jpg",
