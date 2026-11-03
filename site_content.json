@@ -1035,16 +1035,6 @@
           "intro": "Trained in Toastmasters communication, and impromptu address, delivering persuasive presentations on civic engagement, technology ethics, and educational equity.",
           "photos": [
             {
-              "src": "assets/speaking/speech_award_ceremony.jpg",
-              "alt": "Aadya receiving speech honors award",
-              "caption": "Speech Competition Honors Ceremony"
-            },
-            {
-              "src": "assets/speaking/speech_stage.jpg",
-              "alt": "Aadya on stage delivering speech",
-              "caption": "Keynote and competitive speech presentation"
-            },
-            {
               "src": "assets/certificates/nsf_speech_award.png",
               "alt": "North South Foundation speech award",
               "caption": "North South Foundation Speech First Place"
@@ -1052,7 +1042,14 @@
           ]
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "type": "local",
+          "src": "projects/videos/music-performance-preview.mp4",
+          "title": "Flute & Piano Recital Performance",
+          "poster": "assets/uploads/1792918305114_Aadya_Flute_Pic1.png"
+        }
+      ],
       "hide_badges": false,
       "is_robotics": false,
       "img_position": "",
