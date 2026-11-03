@@ -888,27 +888,6 @@
               "caption": "Studio recital, 2024"
             }
           ]
-        },
-        {
-          "title": "Theater",
-          "intro": "School and community theater: backstage technical theater, stage manager and production assistant, with occasional acting and stage performance, including Lawrenceville Shakespeare’s Much Ado About Nothing.",
-          "photos": [
-            {
-              "src": "projects/theater/much-ado-about-nothing.png",
-              "alt": "Much Ado About Nothing production",
-              "caption": "Much Ado About Nothing"
-            },
-            {
-              "src": "projects/theater/archive/the-day-the-internet-died.jpg",
-              "alt": "Scene from the fall play The Day The Internet Died",
-              "caption": "Fall play, The Day The Internet Died"
-            },
-            {
-              "src": "projects/theater/archive/spring-musical.jpg",
-              "alt": "Aadya in a spring musical production",
-              "caption": "Spring musical"
-            }
-          ]
         }
       ],
       "videos": [],
@@ -916,7 +895,8 @@
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 12
+      "sort_order": 12,
+      "badge_position": "right"
     },
     {
       "id": 1792918333524,
