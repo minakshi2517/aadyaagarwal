@@ -695,13 +695,20 @@
       "badges": [
         "Ecology & Ethics"
       ],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Project Overview & Methodology",
+          "intro": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+          "photos": []
+        }
+      ],
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 11
+      "sort_order": 11,
+      "badge_position": "right"
     },
     {
       "id": 14,
