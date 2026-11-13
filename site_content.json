@@ -678,10 +678,11 @@
       "images": [
         "assets/community/leopold-scholars-in-ecology-and-ethics.jpg"
       ],
-      "desc": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+      "desc": "Selected as the Leopold Scholar in Ecology and Ethics — as a student committed to sustainability, environmental ethics, and leadership during the Lawrenceville School experience and beyond. The program  immerses students in field ecology, stream preservation, and the legacy of Lawrenceville alumnus and acclaimed ecologist Aldo Leopold, Class of 1905.",
       "highlights": [
         "Selected as Leopold Scholar in Ecology and Ethics by The Lawrenceville School",
-        "Conducted empirical stream ecology and watershed research at the Stroud Water Research Center",
+        "Conducted empirical stream ecology and watershed research at West Chester University with staff from the Stroud Water Research Center in Avondale, PA",
+        "Studied nutrient loads, aquatic invertebrates and fish, stormwater runoff and stream geology.",
         "Immersed in Aldo Leopold's Land Ethic exploring biodiversity conservation and environmental stewardship",
         "Leadership role on the School's Sustainability Council advancing campus ecological initiatives"
       ],
@@ -695,13 +696,20 @@
       "badges": [
         "Ecology & Ethics"
       ],
-      "sections": [],
+      "sections": [
+        {
+          "title": "Project Overview & Methodology",
+          "intro": "Selected for The Lawrenceville School's Leopold Scholars in Ecology and Ethics — an honors fellowship immersing students in field ecology, stream preservation, and Aldo Leopold's Land Ethic.",
+          "photos": []
+        }
+      ],
       "videos": [],
       "hide_badges": false,
       "is_robotics": false,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 11
+      "sort_order": 11,
+      "badge_position": "right"
     },
     {
       "id": 14,
