@@ -22,8 +22,9 @@
       "title": "FIRST Robotics — FLL & FTC",
       "category_slug": "robotics",
       "category_name": "Robotics & Coding",
-      "img": "assets/robotics/pic 2 - Team award.JPG",
+      "img": "assets/uploads/1794701719646_Big_Red_Robotics_Pic.jpeg",
       "images": [
+        "assets/uploads/1794701719646_Big_Red_Robotics_Pic.jpeg",
         "assets/robotics/pic 2 - Team award.JPG",
         "assets/robotics/pic 10 - wpi award.jpg",
         "assets/robotics/pic 11 - WPI goodies.jpg",
@@ -63,15 +64,18 @@
       "sections": [
         {
           "title": "Autonomous Navigation & Computer-Vision Algorithms",
-          "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring."
+          "intro": "Implemented autonomous navigation routines utilizing sensor telemetry, AprilTag detection, and OpenCV vision pipelines to achieve high-precision field localization and game element scoring.",
+          "photos": []
         },
         {
           "title": "Mechanical Architecture & Drive-train Iterations",
-          "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times."
+          "intro": "Prototyped lightweight intake mechanisms and multi-stage lift systems using custom 3D-printed brackets and high-torque motor gearboxes engineered for rapid cycle times.",
+          "photos": []
         },
         {
           "title": "STEM Mentorship & Community Outreach",
-          "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access."
+          "intro": "Led outreach workshops teaching middle school students foundational Java, robotics concepts, and engineering notebook documentation to expand youth STEM access.",
+          "photos": []
         }
       ],
       "videos": [],
@@ -79,7 +83,8 @@
       "is_robotics": true,
       "img_position": "",
       "modal_img_position": "",
-      "sort_order": 0
+      "sort_order": 0,
+      "badge_position": "right"
     },
     {
       "id": 3,
